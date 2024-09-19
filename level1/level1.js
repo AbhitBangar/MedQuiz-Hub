@@ -20,11 +20,19 @@ let MAX_QUESTIONS = 30;
 
 fetch('questions.json')
     .then((res) => {
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
         return res.json();
     })
     .then((loadedQuestions) => {
+        if (!loadedQuestions || !loadedQuestions.results) {
+            throw new Error("Invalid JSON structure");
+        }
+
         questions = loadedQuestions.results.map((loadedQuestion) => {
-            MAX_QUESTIONS = loadedQuestions.results.length
+            MAX_QUESTIONS = loadedQuestions.results.length;
+
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
@@ -47,7 +55,7 @@ fetch('questions.json')
         startGame();
     })
     .catch((err) => {
-        console.error(err);
+        console.error("There was an error fetching the questions:", err);
     });
 
 
