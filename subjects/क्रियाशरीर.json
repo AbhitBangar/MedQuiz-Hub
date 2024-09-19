@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the primary concern of 'क्रियाशरीर' in Ayurveda?",
+            "correct_answer": "Understanding the functions of the human body",
+            "incorrect_answers": [
+            "Surgical techniques",
+            "Detoxification",
+            "Childcare"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'क्रियाशरीर' primarily deals with:",
+            "correct_answer": "The physiological processes of the body",
+            "incorrect_answers": [
+            "External treatments",
+            "Surgical intervention",
+            "Fever management"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which element is critical in 'क्रियाशरीर'?",
+            "correct_answer": "The balance of doshas (Vata, Pitta, Kapha)",
+            "incorrect_answers": [
+            "Physical exercises",
+            "Herbal medicine",
+            "Surgical precision"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text focuses on physiological concepts in Ayurveda?",
+            "correct_answer": "चरक संहिता",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "अगदतन्त्र",
+            "रसायनशास्त्र"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which concept is central to 'क्रियाशरीर'?",
+            "correct_answer": "Dosha theory",
+            "incorrect_answers": [
+            "Surgical techniques",
+            "Panchakarma",
+            "Rasayana therapy"
+            ]
+        }
+                    
+    ]
+}

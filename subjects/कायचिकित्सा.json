@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following conditions is commonly treated in 'कायचिकित्सा'?",
+            "correct_answer": "Digestive disorders",
+            "incorrect_answers": [
+            "Bone fractures",
+            "Ear infections",
+            "Skin diseases"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'कायचिकित्सा' focuses on the treatment of:",
+            "correct_answer": "Internal diseases",
+            "incorrect_answers": [
+            "Gynecological disorders",
+            "Pediatric disorders",
+            "Eye diseases"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text is primarily followed in 'कायचिकित्सा'?",
+            "correct_answer": "चरक संहिता",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "अष्टांग हृदय",
+            "भावप्रकाश"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following does 'कायचिकित्सा' deal with?",
+            "correct_answer": "Chronic diseases",
+            "incorrect_answers": [
+            "Fracture management",
+            "ENT disorders",
+            "Toxicology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following treatments falls under 'कायचिकित्सा'?",
+            "correct_answer": "Vata disorders",
+            "incorrect_answers": [
+            "Fractures",
+            "Eye disorders",
+            "Pediatric conditions"
+            ]
+        }
+                    
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the main focus of 'रसायनशास्त्र भैषज्यकल्पना'?",
+            "correct_answer": "Preparation and formulation of medicines",
+            "incorrect_answers": [
+            "Surgical tools",
+            "Disease classification",
+            "Mental health"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'रसायनशास्त्र' deals with:",
+            "correct_answer": "Herbal and mineral formulations",
+            "incorrect_answers": [
+            "Surgical techniques",
+            "Dietary guidelines",
+            "Exercise regimens"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text primarily discusses 'भैषज्यकल्पना'?",
+            "correct_answer": "रस रत्न समुच्चय",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "चरक संहिता",
+            "कौमारभृत्य"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is critical in 'रसायनशास्त्र' treatments?",
+            "correct_answer": "Proper dosage and formulation",
+            "incorrect_answers": [
+            "Surgical precision",
+            "Childcare techniques",
+            "Detoxification"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is commonly used in 'भैषज्यकल्पना'?",
+            "correct_answer": "Rasa (Mercury) compounds",
+            "incorrect_answers": [
+            "Animal fat",
+            "Surgical instruments",
+            "Dosha theory"
+            ]
+        }
+                    
+    ]
+}

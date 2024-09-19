@@ -1,0 +1,60 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'कौमारभृत्य' is primarily concerned with the care of:",
+            "correct_answer": "Children",
+            "incorrect_answers": [
+            "Elderly",
+            "Pregnant women",
+            "Infants only"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "In 'कौमारभृत्य', which condition is commonly treated?",
+            "correct_answer": "Childhood disorders",
+            "incorrect_answers": [
+            "Respiratory diseases",
+            "Bone disorders",
+            "Eye diseases"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which ancient text is closely associated with 'कौमारभृत्य'?",
+            "correct_answer": "अष्टांग हृदय",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "भावप्रकाश",
+            "चरक संहिता"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a focus area of 'कौमारभृत्य'?",
+            "correct_answer": "Nutrition in children",
+            "incorrect_answers": [
+            "Mental health",
+            "Surgical care",
+            "Gynecology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which Ayurvedic branch specifically deals with neonatal care?",
+            "correct_answer": "कौमारभृत्य",
+            "incorrect_answers": [
+            "कायचिकित्सा",
+            "शल्यतन्त्र",
+            "रसायशास्त्र"
+            ]
+        }                   
+    ]
+}

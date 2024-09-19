@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the primary focus of 'स्वास्थवृत्त' in Ayurveda?",
+            "correct_answer": "Preventive health and hygiene",
+            "incorrect_answers": [
+            "Surgery",
+            "Pediatrics",
+            "Toxicology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'स्वास्थवृत्त' primarily deals with:",
+            "correct_answer": "Maintaining health through lifestyle and hygiene",
+            "incorrect_answers": [
+            "Eye disorders",
+            "Surgical conditions",
+            "Herbal medicine"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which is a core principle of 'स्वास्थवृत्त'?",
+            "correct_answer": "Dinacharya (Daily routine)",
+            "incorrect_answers": [
+            "Surgical techniques",
+            "Panchakarma",
+            "Rasayana therapy"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text is a key source of knowledge on 'स्वास्थवृत्त'?",
+            "correct_answer": "चरक संहिता",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "अगदतन्त्र",
+            "कौमारभृत्य"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is recommended in 'स्वास्थवृत्त' for preventive health?",
+            "correct_answer": "Yoga and exercise",
+            "incorrect_answers": [
+            "Surgical intervention",
+            "Panchakarma",
+            "Detoxification therapies"
+            ]
+        }
+                    
+    ]
+}

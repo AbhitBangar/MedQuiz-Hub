@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'द्रव्यगुण विज्ञान' deals with the properties of:",
+            "correct_answer": "Medicinal plants",
+            "incorrect_answers": [
+            "Metals and minerals",
+            "Surgical instruments",
+            "Spiritual health"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which property is NOT studied under 'द्रव्यगुण विज्ञान'?",
+            "correct_answer": "Surgical methods",
+            "incorrect_answers": [
+            "Taste",
+            "Potency",
+            "Therapeutic effects"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a key principle in 'द्रव्यगुण विज्ञान'?",
+            "correct_answer": "Rasa (taste)",
+            "incorrect_answers": [
+            "Sutra (verses)",
+            "Abhyanga",
+            "Nadi Pariksha"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following branches of Ayurveda helps identify plant-based treatments?",
+            "correct_answer": "द्रव्यगुण विज्ञान",
+            "incorrect_answers": [
+            "शल्यतन्त्र",
+            "अगदतन्त्र",
+            "कायचिकित्सा"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What does 'वीर्य' refer to in the context of 'द्रव्यगुण विज्ञान'?",
+            "correct_answer": "Potency of a medicinal substance",
+            "incorrect_answers": [
+            "Digestion",
+            "Diagnosis",
+            "Bone strength"
+            ]
+        }
+                    
+    ]
+}

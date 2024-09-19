@@ -1,0 +1,60 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the main focus of 'अगदतन्त्र' in Ayurveda?",
+            "correct_answer": "Toxicology and poison treatment",
+            "incorrect_answers": [
+            "Pediatrics",
+            "Surgery",
+            "Pharmacology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'अगदतन्त्र' is primarily used for the treatment of:",
+            "correct_answer": "Snake bites and poisoning",
+            "incorrect_answers": [
+            "Fever",
+            "Eye disorders",
+            "Joint pain"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which element is critical in 'अगदतन्त्र' treatments?",
+            "correct_answer": "Detoxification",
+            "incorrect_answers": [
+            "Herbal medicine",
+            "Surgical techniques",
+            "Exercise"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text focuses on poison management in Ayurveda?",
+            "correct_answer": "अगदतन्त्र",
+            "incorrect_answers": [
+            "चरक संहिता",
+            "सुश्रुत संहिता",
+            "कौमारभृत्य"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a common remedy used in 'अगदतन्त्र'?",
+            "correct_answer": "Antidotes",
+            "incorrect_answers": [
+            "Anesthesia",
+            "Panchakarma",
+            "Rejuvenation therapies"
+            ]
+        }          
+    ]
+}

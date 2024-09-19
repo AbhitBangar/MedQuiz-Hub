@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the primary focus of 'रचनाशरीर'?",
+            "correct_answer": "Study of human anatomy",
+            "incorrect_answers": [
+            "Surgical techniques",
+            "Pediatrics",
+            "Herbal medicine"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'रचनाशरीर' primarily deals with the study of:",
+            "correct_answer": "Body structures like bones, muscles, and organs",
+            "incorrect_answers": [
+            "Mental health",
+            "Dosha balancing",
+            "Surgical precision"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which ancient text focuses on 'रचनाशरीर'?",
+            "correct_answer": "सुश्रुत संहिता",
+            "incorrect_answers": [
+            "चरक संहिता",
+            "अष्टांग हृदय",
+            "रोगनिदान"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is a key element of 'रचनाशरीर'?",
+            "correct_answer": "Understanding of the body's physical form",
+            "incorrect_answers": [
+            "Herbal formulations",
+            "Panchakarma techniques",
+            "Pulse diagnosis"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is studied under 'रचनाशरीर'?",
+            "correct_answer": "The skeletal system",
+            "incorrect_answers": [
+            "Detoxification methods",
+            "Digestive processes",
+            "Eye treatments"
+            ]
+        }
+                    
+    ]
+}

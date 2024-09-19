@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizExam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="./assets/collegelogo.jpg">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="input-group">
+                <label for="Vikram Shelavale">Username:</label>
+                <input type="text" id="Vikram Shelavale" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="Dhruvi@1506">Password:</label>
+                <input type="password" id="Dhruvi@1506" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="error-message"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>

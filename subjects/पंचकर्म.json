@@ -1,0 +1,60 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the main focus of 'पंचकर्म' in Ayurveda?",
+            "correct_answer": "Detoxification therapies",
+            "incorrect_answers": [
+            "Surgical treatments",
+            "Pediatrics",
+            "Gynecology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'पंचकर्म' includes which of the following treatments?",
+            "correct_answer": "Vamana (Emesis therapy)",
+            "incorrect_answers": [
+            "Surgical removal",
+            "Eye treatment",
+            "Joint therapy"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which element is critical in 'पंचकर्म' treatments?",
+            "correct_answer": "Purification of the body",
+            "incorrect_answers": [
+            "Herbal medicine",
+            "Surgical precision",
+            "Eye health"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which Ayurvedic text discusses 'पंचकर्म' therapies?",
+            "correct_answer": "चरक संहिता",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "अगदतन्त्र",
+            "रोगनिदान"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following therapies is part of 'पंचकर्म'?",
+            "correct_answer": "Basti (Enema therapy)",
+            "incorrect_answers": [
+            "Surgery",
+            "Antidotes",
+            "Physical exercise"
+            ]
+        }        
+    ]
+}

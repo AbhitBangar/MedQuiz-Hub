@@ -1,0 +1,511 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text is primarily concerned with the science of medicinal plants and their preparations?",
+            "correct_answer": "द्रव्यगुण विज्ञान (Dravyaguna Vigyan)",
+            "incorrect_answers": [
+                "कौमारभृत्य (Kaumarbhritya)",
+                "संहिता (Samhita)",
+                "पंचकर्म (Panchakarma)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What does the term 'कायचिकित्सा' refer to in Ayurveda?",
+            "correct_answer": "Internal medicine",
+            "incorrect_answers": [
+                "Surgery",
+                "Eye diseases",
+                "Panchakarma"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which subject deals with the study of anatomy and physiology in Ayurveda?",
+            "correct_answer": "रचना शरीर (Rachana Sharir)",
+            "incorrect_answers": [
+                "अगदतन्त्र (Agadtantra)",
+                "शलाक्य (Shalakya)",
+                "रसायशास्त्र (Rasashastra)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'स्वस्थवृत्त' focuses on:",
+            "correct_answer": "Health and hygiene",
+            "incorrect_answers": [
+                "Surgical procedures",
+                "Gynecology",
+                "Toxicology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The primary goal of 'पंचकर्म' is:",
+            "correct_answer": "Detoxification and rejuvenation",
+            "incorrect_answers": [
+                "Bone fractures treatment",
+                "Skin diseases",
+                "Eye disorders"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is not a branch of Ayurveda?",
+            "correct_answer": "रसायशास्त्र औषधिकार्म (Rasashastra Bhaishajyakalpana)",
+            "incorrect_answers": [
+                "अगदतन्त्र (Agadtantra)",
+                "क्रिया शरीर (Kriya Sharir)",
+                "संहिता (Samhita)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The primary focus of 'रोगनिदान' is:",
+            "correct_answer": "Disease diagnosis",
+            "incorrect_answers": [
+                "Patient examination",
+                "Prescription of medicines",
+                "Preparation of herbal formulations"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "In Ayurveda, 'शल्यतन्त्र' refers to:",
+            "correct_answer": "Surgical treatment",
+            "incorrect_answers": [
+                "Pediatric care",
+                "Toxicology",
+                "Pharmacology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The main focus of 'द्रव्यगुण विज्ञान' is:",
+            "correct_answer": "Medicinal properties of drugs",
+            "incorrect_answers": [
+                "Panchakarma therapies",
+                "Ayurvedic texts",
+                "Diet and nutrition"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'कौमारभृत्य' is specialized in the treatment of:",
+            "correct_answer": "Pediatric disorders",
+            "incorrect_answers": [
+                "Skin diseases",
+                "Gynecological issues",
+                "Internal medicine"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "In which subject would you study the 'सुश्रुत संहिता'?",
+            "correct_answer": "शल्यतन्त्र (Shalya Tantra)",
+            "incorrect_answers": [
+                "अगदतन्त्र (Agadtantra)",
+                "द्रव्यगुण विज्ञान (Dravyaguna Vigyan)",
+                "कौमारभृत्य (Kaumarbhritya)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The primary focus of 'रसायशास्त्र औषधिकार्म' is:",
+            "correct_answer": "Preparation of medicinal compounds",
+            "incorrect_answers": [
+                "Surgical procedures",
+                "Disease diagnosis",
+                "Preventive medicine"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a Sanskrit term related to the study of surgical techniques?",
+            "correct_answer": "शल्यतन्त्र (Shalya Tantra)",
+            "incorrect_answers": [
+                "क्रिया शरीर (Kriya Sharir)",
+                "प्रसूति तन्त्र (Prasutitantra)",
+                "अगदतन्त्र (Agadtantra)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The subject 'शलाक्य' primarily deals with:",
+            "correct_answer": "Ear, nose, and throat disorders",
+            "incorrect_answers": [
+                "Toxicology",
+                "Digestive disorders",
+                "Pediatrics"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'प्रसूति तन्त्र और स्त्रीरोग' focuses on:",
+            "correct_answer": "Obstetrics and gynecology",
+            "incorrect_answers": [
+                "Mental health",
+                "Respiratory diseases",
+                "Bone and joint disorders"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'रचना शरीर' involves the study of:",
+            "correct_answer": "Anatomy",
+            "incorrect_answers": [
+                "Pharmacology",
+                "Toxicology",
+                "Ayurveda's philosophy"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is not a part of the 'पंचकर्म' process?",
+            "correct_answer": "अभ्यंगा (Abhyanga)",
+            "incorrect_answers": [
+                "विरेचन (Virechana)",
+                "बस्ती (Basti)",
+                "शिरोधारा (Shirodhara)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "In Ayurveda, 'क्रिया शरीर' is the study of:",
+            "correct_answer": "Physiology",
+            "incorrect_answers": [
+                "Pathology",
+                "Pharmacology",
+                "Anatomy"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The 'सुश्रुत संहिता' primarily covers:",
+            "correct_answer": "Surgical techniques",
+            "incorrect_answers": [
+                "Pediatric care",
+                "Maternal health",
+                "Internal medicine"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The 'चरक संहिता' is a key text in:",
+            "correct_answer": "Internal medicine",
+            "incorrect_answers": [
+                "Surgery",
+                "Toxicology",
+                "Ophthalmology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of these texts is primarily related to Ayurvedic toxicology?",
+            "correct_answer": "अगदतन्त्र (Agadtantra)",
+            "incorrect_answers": [
+                "रसायशास्त्र (Rasashastra)",
+                "शल्यतन्त्र (Shalya Tantra)",
+                "पंचकर्म (Panchakarma)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The Sanskrit term 'आयुर्वेद' translates to:",
+            "correct_answer": "Science of life",
+            "incorrect_answers": [
+                "Study of herbs",
+                "Surgical science",
+                "Anatomy"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'स्वस्थवृत्त' is focused on:",
+            "correct_answer": "Preventive medicine",
+            "incorrect_answers": [
+                "Gynecology",
+                "Toxicology",
+                "Ophthalmology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which subject involves the study of 'सूत्र' (verses) related to Ayurvedic practices?",
+            "correct_answer": "संहिता (Samhita)",
+            "incorrect_answers": [
+                "क्रिया शरीर (Kriya Sharir)",
+                "शल्यतन्त्र (Shalya Tantra)",
+                "अगदतन्त्र (Agadtantra)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The term 'रोगनिदान' is best described as:",
+            "correct_answer": "Disease diagnosis",
+            "incorrect_answers": [
+                "Treatment planning",
+                "Pharmacological research",
+                "Surgical techniques"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which subject covers Ayurvedic methods for disease prevention and promotion of health?",
+            "correct_answer": "स्वस्थवृत्त (Swasthavritta)",
+            "incorrect_answers": [
+                "शल्यतन्त्र (Shalya Tantra)",
+                "द्रव्यगुण विज्ञान (Dravyaguna Vigyan)",
+                "कौमारभृत्य (Kaumarbhritya)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of these texts is known for its surgical procedures?",
+            "correct_answer": "सुश्रुत संहिता (Sushruta Samhita)",
+            "incorrect_answers": [
+                "चरक संहिता (Charaka Samhita)",
+                "भावप्रकाश (Bhavaprakasha)",
+                "अष्टांग हृदय (Ashtanga Hridaya)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The primary focus of 'रसायशास्त्र' is:",
+            "correct_answer": "Use of metals and minerals in medicine",
+            "incorrect_answers": [
+                "Pharmacological research",
+                "Anatomy",
+                "Surgical techniques"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text is most associated with the study of Ayurvedic pediatrics?",
+            "correct_answer": "कौमारभृत्य (Kaumarbhritya)",
+            "incorrect_answers": [
+                "रसायशास्त्र (Rasashastra)",
+                "शल्यतन्त्र (Shalya Tantra)",
+                "स्वस्थवृत्त (Swasthavritta)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'प्रसूति तन्त्र' deals with:",
+            "correct_answer": "Obstetrics and gynecology",
+            "incorrect_answers": [
+                "Pediatric care",
+                "Internal medicine",
+                "Toxicology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The text 'भावप्रकाश' is most associated with:",
+            "correct_answer": "Pharmacology and herbal medicine",
+            "incorrect_answers": [
+                "Surgery",
+                "Pediatrics",
+                "Ophthalmology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which subject is concerned with the Ayurvedic principles for mental health?",
+            "correct_answer": "अगदतन्त्र (Agadtantra)",
+            "incorrect_answers": [
+                "रसायशास्त्र (Rasashastra)",
+                "कौमारभृत्य (Kaumarbhritya)",
+                "पंचकर्म (Panchakarma)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which branch of Ayurveda is focused on rejuvenation therapies?",
+            "correct_answer": "पंचकर्म (Panchakarma)",
+            "incorrect_answers": [
+                "अगदतन्त्र (Agadtantra)",
+                "शल्यतन्त्र (Shalya Tantra)",
+                "द्रव्यगुण विज्ञान (Dravyaguna Vigyan)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The study of 'अगदतन्त्र' is focused on:",
+            "correct_answer": "Toxicology and treatment of poisons",
+            "incorrect_answers": [
+                "Surgery",
+                "Anatomy",
+                "Pharmacology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of these subjects involves the study of 'आयुर्वेद' (Ayurveda) texts?",
+            "correct_answer": "संहिता (Samhita)",
+            "incorrect_answers": [
+                "कौमारभृत्य (Kaumarbhritya)",
+                "रसायशास्त्र (Rasashastra)",
+                "पंचकर्म (Panchakarma)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which branch focuses on the treatment of bone and joint disorders?",
+            "correct_answer": "शल्यतन्त्र (Shalya Tantra)",
+            "incorrect_answers": [
+                "अगदतन्त्र (Agadtantra)",
+                "द्रव्यगुण विज्ञान (Dravyaguna Vigyan)",
+                "कौमारभृत्य (Kaumarbhritya)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'रोगनिदान' primarily involves:",
+            "correct_answer": "Disease diagnosis and classification",
+            "incorrect_answers": [
+                "Treatment techniques",
+                "Pharmacological studies",
+                "Surgical procedures"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The term 'शलाक्य' refers to which branch of Ayurveda?",
+            "correct_answer": "Ophthalmology and ENT",
+            "incorrect_answers": [
+                "Surgery",
+                "Pediatrics",
+                "Pharmacology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which subject includes the study of therapeutic procedures like 'शिरोधारा'?",
+            "correct_answer": "पंचकर्म (Panchakarma)",
+            "incorrect_answers": [
+                "द्रव्यगुण विज्ञान (Dravyaguna Vigyan)",
+                "कौमारभृत्य (Kaumarbhritya)",
+                "अगदतन्त्र (Agadtantra)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "In Ayurveda, which branch is most concerned with internal medicine?",
+            "correct_answer": "कायचिकित्सा (Kayachikitsa)",
+            "incorrect_answers": [
+                "रसायशास्त्र (Rasashastra)",
+                "पंचकर्म (Panchakarma)",
+                "शल्यतन्त्र (Shalya Tantra)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The study of 'अगदतन्त्र' involves:",
+            "correct_answer": "Toxicology and treatments for poisoning",
+            "incorrect_answers": [
+                "Surgical methods",
+                "Digestive disorders",
+                "Pediatrics"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text deals with the Ayurvedic study of diseases and their treatments?",
+            "correct_answer": "चरक संहिता (Charaka Samhita)",
+            "incorrect_answers": [
+                "सुश्रुत संहिता (Sushruta Samhita)",
+                "भावप्रकाश (Bhavaprakasha)",
+                "अष्टांग हृदय (Ashtanga Hridaya)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The Sanskrit sutra 'रोगं वैद्यो विधीयति' is related to:",
+            "correct_answer": "Disease diagnosis and treatment",
+            "incorrect_answers": [
+                "Preparation of medicines",
+                "Surgical techniques",
+                "Philosophy of Ayurveda"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The subject 'द्रव्यगुण विज्ञान' is focused on:",
+            "correct_answer": "Pharmacological aspects of medicinal substances",
+            "incorrect_answers": [
+                "Surgical procedures",
+                "Internal medicine",
+                "Pediatrics"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following texts is related to the Ayurvedic study of surgery?",
+            "correct_answer": "सुश्रुत संहिता (Sushruta Samhita)",
+            "incorrect_answers": [
+                "चरक संहिता (Charaka Samhita)",
+                "भावप्रकाश (Bhavaprakasha)",
+                "अष्टांग हृदय (Ashtanga Hridaya)"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "The term 'स्वस्थवृत्त' primarily refers to:",
+            "correct_answer": "Preventive health and hygiene",
+            "incorrect_answers": [
+                "Surgical techniques",
+                "Pediatric care",
+                "Toxicology"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the focus of 'शालाक्य' in Ayurveda?",
+            "correct_answer": "Ear, Nose, Throat, and Eye diseases",
+            "incorrect_answers": [
+            "Surgery",
+            "Pediatrics",
+            "Toxicology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'शालाक्य' primarily deals with the treatment of:",
+            "correct_answer": "Eye, ear, and throat disorders",
+            "incorrect_answers": [
+            "Skin diseases",
+            "Joint pain",
+            "Mental health"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which is a common treatment in 'शालाक्य'?",
+            "correct_answer": "Netra Tarpana (Eye treatment)",
+            "incorrect_answers": [
+            "Basti (Enema)",
+            "Surgery",
+            "Detoxification"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which ancient text discusses 'शालाक्य' in detail?",
+            "correct_answer": "सुश्रुत संहिता",
+            "incorrect_answers": [
+            "चरक संहिता",
+            "कौमारभृत्य",
+            "रस रत्न समुच्चय"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a diagnostic tool in 'शालाक्य'?",
+            "correct_answer": "Netra Pariksha (Eye examination)",
+            "incorrect_answers": [
+            "Pulse examination",
+            "Detox therapies",
+            "Dietary guidelines"
+            ]
+        }
+                    
+    ]
+}

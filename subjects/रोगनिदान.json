@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the primary focus of 'रोगनिदान'?",
+            "correct_answer": "Diagnosis of diseases",
+            "incorrect_answers": [
+            "Surgical intervention",
+            "Pediatric care",
+            "Poison treatment"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'रोगनिदान' primarily deals with:",
+            "correct_answer": "Identifying symptoms and causes of diseases",
+            "incorrect_answers": [
+            "Formulating herbal medicine",
+            "Performing surgeries",
+            "Panchakarma therapies"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which is a key component in 'रोगनिदान'?",
+            "correct_answer": "Pulse diagnosis (नाड़ी परीक्षा)",
+            "incorrect_answers": [
+            "Bloodletting",
+            "Detoxification",
+            "Herbal preparations"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which Ayurvedic text deals extensively with 'रोगनिदान'?",
+            "correct_answer": "माधव निदान",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "चरक संहिता",
+            "अगदतन्त्र"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a diagnostic tool used in 'रोगनिदान'?",
+            "correct_answer": "Nadi Pariksha (Pulse examination)",
+            "incorrect_answers": [
+            "Surgical knife",
+            "Detoxification therapies",
+            "Eye examination"
+            ]
+        }
+                    
+    ]
+}

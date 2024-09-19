@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the main focus of 'प्रसूतीतंत्र आणि स्त्रीरोग'?",
+            "correct_answer": "Gynecology and obstetrics",
+            "incorrect_answers": [
+            "Pediatrics",
+            "Surgery",
+            "Poison management"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'प्रसूतीतंत्र' primarily deals with the treatment of:",
+            "correct_answer": "Pregnancy and childbirth",
+            "incorrect_answers": [
+            "Infant care",
+            "Fever",
+            "Surgical conditions"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which element is critical in 'प्रसूतीतंत्र' treatments?",
+            "correct_answer": "Prenatal care",
+            "incorrect_answers": [
+            "Detoxification",
+            "Herbal medicine",
+            "Eye care"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text discusses 'प्रसूतीतंत्र आणि स्त्रीरोग' in detail?",
+            "correct_answer": "चरक संहिता",
+            "incorrect_answers": [
+            "सुश्रुत संहिता",
+            "अगदतन्त्र",
+            "रोगनिदान"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is commonly addressed in 'प्रसूतीतंत्र'?",
+            "correct_answer": "Postpartum care",
+            "incorrect_answers": [
+            "Detoxification",
+            "Mental health issues",
+            "Poison treatment"
+            ]
+        }
+                    
+    ]
+}

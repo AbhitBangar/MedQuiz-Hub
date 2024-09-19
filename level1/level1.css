@@ -1,0 +1,130 @@
+.choice-container {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  /* border: 0.1rem solid #6200ea; */
+  background-color: #ffffff;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(112, 45, 205, 0.521);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  font-weight: bold;
+  padding: 1.5rem 2.5rem;
+  background-color: #6200ea;
+  color: #ffffff;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: #28a745;
+}
+
+.incorrect {
+  background-color: #dc3545;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  border-radius: 1rem;
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #6200ea;
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  border-radius: 0.3rem;
+  height: 3.6rem;
+  background-color: #6200ea;
+  width: 0%;
+}
+
+/* LOADER */
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #6200ea;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+/* Submit Button */
+
+#submit-button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #6200ea;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #6200ea;
+  margin-left: auto;
+  display: block; 
+
+  cursor: pointer;
+  transition: transform 150ms;
+}
+
+.button-container {
+  text-align: right; /* Align text within the container to the right */
+  padding-right: 20px; /* Optional: Add some space on the right if needed */
+}
+
+
+#submit-button:hover {
+  /* cursor: pointer; */
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(76, 0, 255, 0.689);
+  transform: translateY(-0.1rem);
+  /* transition: transform 150ms; */
+}
+
+#submit-button[disabled]:hover {
+  /* cursor: not-allowed; */
+  /* box-shadow: none; */
+  transform: translateY(0.1rem);
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

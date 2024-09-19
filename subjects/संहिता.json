@@ -1,0 +1,61 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the primary focus of 'संहिता' in Ayurveda?",
+            "correct_answer": "Compilation of Ayurvedic knowledge",
+            "incorrect_answers": [
+            "Surgical methods",
+            "Poison management",
+            "Physical exercise"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'चरक संहिता' primarily deals with:",
+            "correct_answer": "Internal medicine",
+            "incorrect_answers": [
+            "Surgery",
+            "Pediatrics",
+            "Toxicology"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text focuses on surgery in Ayurveda?",
+            "correct_answer": "सुश्रुत संहिता",
+            "incorrect_answers": [
+            "चरक संहिता",
+            "अष्टांग हृदय",
+            "अगदतन्त्र"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which element is critical in 'सुश्रुत संहिता'?",
+            "correct_answer": "Surgical techniques",
+            "incorrect_answers": [
+            "Pediatrics",
+            "Pharmacology",
+            "Eye care"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which text is considered a major source of knowledge in 'संहिता'?",
+            "correct_answer": "अष्टांग हृदय",
+            "incorrect_answers": [
+            "चरक संहिता",
+            "रस रत्न समुच्चय",
+            "शार्ंगधर संहिता"
+            ]
+        }
+                    
+    ]
+}

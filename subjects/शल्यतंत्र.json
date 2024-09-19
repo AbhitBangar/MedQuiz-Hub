@@ -1,0 +1,60 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is the main focus of 'शल्यतंत्र' in Ayurveda?",
+            "correct_answer": "Surgery and surgical techniques",
+            "incorrect_answers": [
+            "Internal medicine",
+            "Pediatrics",
+            "Poison treatment"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "'शल्यतंत्र' primarily deals with the treatment of:",
+            "correct_answer": "Injuries and surgical conditions",
+            "incorrect_answers": [
+            "Mental health",
+            "Detoxification",
+            "Eye diseases"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which ancient text is the primary source for 'शल्यतंत्र'?",
+            "correct_answer": "सुश्रुत संहिता",
+            "incorrect_answers": [
+            "चरक संहिता",
+            "अष्टांग हृदय",
+            "कौमारभृत्य"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "What is a key component of 'शल्यतंत्र' treatment?",
+            "correct_answer": "Use of surgical instruments",
+            "incorrect_answers": [
+            "Detoxification",
+            "Herbal formulations",
+            "Physical therapy"
+            ]
+        },
+        {
+            "category": "Ayurveda",
+            "type": "multiple",
+            "question": "Which of the following is a procedure in 'शल्यतंत्र'?",
+            "correct_answer": "Cataract surgery",
+            "incorrect_answers": [
+            "Detoxification",
+            "Pulse diagnosis",
+            "Eye examination"
+            ]
+        }                   
+    ]
+}
