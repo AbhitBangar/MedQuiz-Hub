@@ -1,9 +1,11 @@
+/* General Reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Header Styling */
 header {
   background-color: #6200ea;
   color: #ffffff;
@@ -13,6 +15,7 @@ header {
   font-family: initial;
 }
 
+/* Body and Container */
 body {
   height: 100vh;
   background: #ffffff;
@@ -26,12 +29,13 @@ body {
   padding: 3em;
 }
 
+/* Wheel */
 #wheel {
   width: 100%; /* Make the wheel fill the container */
   max-height: inherit;
-  /* margin-top: 0px; Add margin for spacing */
 }
 
+/* Spin Button */
 #spin-btn {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -50,6 +54,7 @@ body {
   font-weight: 600;
 }
 
+/* Image Styling */
 img {
   position: absolute;
   width: 4em;
@@ -57,25 +62,26 @@ img {
   right: 1%;
 }
 
+/* Final Value Text */
 #final-value {
   font-size: 1.5em;
   text-align: center;
-  /* margin-top: 1em; */
   color: #6200ea;
   font-weight: 500;
 }
 
+/* Subject Button Grid */
 .subject {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7 columns of equal width */
-  gap: 10px; /* Adjust space between buttons as needed */
-  justify-content: center; /* Center the grid within the container */
+  gap: 10px; /* Adjust space between buttons */
+  justify-content: center;
   margin: 0 auto;
   max-width: 100%;
 }
 
 .btn {
-  display: block; /* Ensures buttons take full width of grid cell */
+  display: block;
   padding: 15px 20px;
   font-size: 1em;
   text-align: center;
@@ -86,21 +92,55 @@ img {
   transition: background-color 0.3s ease;
 }
 
+/* Button Hover Effect */
 .btn:hover {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(76, 0, 255, 0.689);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
 }
 
-/* Responsive adjustment for smaller screens */
+/* Media Query for Tablets and Smaller Screens */
 @media screen and (max-width: 768px) {
   .subject {
-    grid-template-columns: repeat(2, 1fr); /* Stack buttons in 2 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+  }
+
+  #spin-btn {
+    height: 20%;
+    width: 20%; /* Reduce the button size */
+    font-size: 1.5em; /* Adjust font size */
+  }
+
+  header {
+    font-size: 1.5rem; /* Smaller header font size */
   }
 }
 
-/* Additional styling for individual buttons if needed */
-.btn {
-  background-color: #6200ea;
-  color: #fff;
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .subject {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+  }
+
+  .container {
+    padding: 2em;
+  }
+
+  #spin-btn {
+    height: 18%;
+    width: 18%;
+    font-size: 1.2em; /* Smaller button and font size */
+  }
+
+  header {
+    font-size: 1.2rem; /* Smaller font for header */
+  }
+
+  #wheel {
+    width: 90%; /* Adjust wheel size */
+  }
+
+  img {
+    width: 3em; /* Smaller image size */
+  }
 }

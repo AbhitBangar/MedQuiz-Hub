@@ -1,11 +1,12 @@
+/* General Styles */
 .choice-container {
   font-weight: bold;
   display: flex;
   margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.8rem;
-  /* border: 0.1rem solid #6200ea; */
   background-color: #ffffff;
+  flex-direction: row;
 }
 
 .choice-container:hover {
@@ -36,7 +37,6 @@
 }
 
 /* HUD */
-
 #hud {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,8 @@
 
 #progressBar {
   border-radius: 1rem;
-  width: 20rem;
+  width: 100%;
+  max-width: 20rem;
   height: 4rem;
   border: 0.3rem solid #6200ea;
   margin-top: 1.5rem;
@@ -68,7 +69,7 @@
   width: 0%;
 }
 
-/* LOADER */
+/* Loader */
 #loader {
   border: 1.6rem solid white;
   border-radius: 50%;
@@ -79,46 +80,35 @@
 }
 
 /* Submit Button */
-
 #submit-button {
   font-size: 1.8rem;
   font-weight: bold;
   padding: 1rem 0;
-  width: 20rem;
+  width: 100%;
+  max-width: 20rem;
   text-align: center;
   border: 0.1rem solid #6200ea;
   border-radius: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
-  text-decoration: none;
+  margin: 3rem auto 1rem auto;
   color: #ffffff;
   background-color: #6200ea;
-  margin-left: auto;
-  display: block; 
-
   cursor: pointer;
   transition: transform 150ms;
 }
 
 .button-container {
-  text-align: right; /* Align text within the container to the right */
-  padding-right: 20px; /* Optional: Add some space on the right if needed */
+  text-align: right;
+  padding-right: 20px;
 }
 
-
 #submit-button:hover {
-  /* cursor: pointer; */
   box-shadow: 0 0.4rem 1.4rem 0 rgba(76, 0, 255, 0.689);
   transform: translateY(-0.1rem);
-  /* transition: transform 150ms; */
 }
 
 #submit-button[disabled]:hover {
-  /* cursor: not-allowed; */
-  /* box-shadow: none; */
   transform: translateY(0.1rem);
 }
-
 
 @keyframes spin {
   0% {
@@ -126,5 +116,63 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .choice-container {
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+
+  .choice-prefix {
+    padding: 1rem 1.5rem;
+  }
+
+  .choice-text {
+    padding: 1rem;
+  }
+
+  .hud-prefix {
+    font-size: 1.5rem;
+  }
+
+  #progressBar {
+    height: 3rem;
+  }
+
+  #submit-button {
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+  }
+
+  #loader {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .choice-container {
+    font-size: 1.2rem;
+  }
+
+  .choice-prefix, .choice-text {
+    padding: 0.8rem;
+  }
+
+  #submit-button {
+    font-size: 1.4rem;
+    padding: 0.6rem 0;
+  }
+
+  #progressBar {
+    height: 2.5rem;
+  }
+
+  #loader {
+    width: 8rem;
+    height: 8rem;
   }
 }
