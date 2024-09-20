@@ -1,8 +1,8 @@
 /* Array of video URLs */
 const videoUrls = [
-    '/videos/basti.mp4',
-    '/videos/basti.mp4',
-    '/videos/basti.mp4'
+    '../videos/basti.mp4',
+    '../videos/basti.mp4',
+    '../videos/basti.mp4'
 ];
 
 /* Corresponding explanations for each video */
