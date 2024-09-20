@@ -18,7 +18,7 @@ let questions = [];
 const CORRECT_BONUS = 10;
 let MAX_QUESTIONS = 30;
 
-fetch('द्रव्यगुण_विज्ञान.json')
+fetch('../द्रव्यगुण_विज्ञान.json')
     .then((res) => {
         return res.json();
     })
@@ -64,7 +64,7 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         // Go to the end page
-        return window.location.assign('/end.html');
+        return window.location.assign('../end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;

@@ -18,7 +18,7 @@ let questions = [];
 const CORRECT_BONUS = 10;
 let MAX_QUESTIONS = 30;
 
-fetch('कायचिकित्सा.json')
+fetch('../कायचिकित्सा.json')
     .then((res) => {
         return res.json();
     })

@@ -18,7 +18,7 @@ let questions = [];
 const CORRECT_BONUS = 10;
 let MAX_QUESTIONS = 30;
 
-fetch('./questions.json')
+fetch('../questions.json')
     .then((res) => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
@@ -72,7 +72,7 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         // Go to the end page
-        return window.location.assign('./end.html');
+        return window.location.assign('../end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -140,71 +140,6 @@ submitButton.addEventListener('click', () => {
         getNewQuestion();
     }, 1000);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-// Old version
-
-
-// getNewQuestion = () => {
-//     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-//         localStorage.setItem('mostRecentScore', score);
-//         //go to the end page
-//         return window.location.assign('./end.html');
-//     }
-//     questionCounter++;
-//     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
-//     //Update the progress bar
-//     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-
-//     const questionIndex = 0; // Always select the first question
-//     currentQuestion = availableQuesions[questionIndex];
-//     question.innerText = currentQuestion.question;
-
-//     choices.forEach((choice) => {
-//         const number = choice.dataset['number'];
-//         choice.innerText = currentQuestion['choice' + number];
-//     });
-
-//     availableQuesions.splice(questionIndex, 1);
-//     acceptingAnswers = true;
-// };
-
-
-// choices.forEach((choice) => {
-//     choice.addEventListener('click', (e) => {
-//         if (!acceptingAnswers) return;
-
-//         acceptingAnswers = false;
-//         const selectedChoice = e.target;
-//         const selectedAnswer = selectedChoice.dataset['number'];
-
-//         const classToApply =
-//             selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
-//         if (classToApply === 'correct') {
-//             incrementScore(CORRECT_BONUS);
-//         }
-
-//         selectedChoice.parentElement.classList.add(classToApply);
-
-//         setTimeout(() => {
-//             selectedChoice.parentElement.classList.remove(classToApply);
-//             getNewQuestion();
-//         }, 1000);
-//     });
-// });
-
-
 
 incrementScore = (num) => {
     score += num;
