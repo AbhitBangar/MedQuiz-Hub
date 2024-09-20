@@ -18,7 +18,7 @@ let questions = [];
 const CORRECT_BONUS = 10;
 let MAX_QUESTIONS = 30;
 
-fetch('../अगदतंत्र.json')
+fetch('./अगदतंत्र.json')
     .then((res) => {
         return res.json();
     })
