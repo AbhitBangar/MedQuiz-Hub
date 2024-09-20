@@ -69,3 +69,19 @@ button:hover {
     font-size: 20px;
     margin-top: 10px;
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px; /* Reduce padding on mobile */
+        width: 100%; /* Take full width */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Adjust heading size */
+    }
+
+    button {
+        font-size: 1.2rem; /* Adjust button font size */
+    }
+}
