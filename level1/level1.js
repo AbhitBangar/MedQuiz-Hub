@@ -18,7 +18,7 @@ let questions = [];
 const CORRECT_BONUS = 10;
 let MAX_QUESTIONS = 30;
 
-fetch('./questions.json')
+fetch('./level1/questions.json')
     .then((res) => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
