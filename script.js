@@ -11,7 +11,7 @@ function validateLogin() {
     // Check if username and password match the valid credentials
     if (username === validUsername && password === validPassword) {
         // Redirect to a homepage or another page on successful login
-        window.location.href = "home.html";
+        window.location.href = "home";
         return false; // Prevent form from submitting
     } else {
         // Show error message if credentials are incorrect
