@@ -60,14 +60,21 @@ startGame = () => {
     game.classList.remove('hidden');
     loader.classList.add('hidden');
 };
+
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         // Go to the end page
         return window.location.assign('../end.html');
     }
+
+    // Reset score to 0 for every new question
+    score = 0;
+    scoreText.innerText = score; // Update the score display
+
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    
     // Update the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
@@ -88,7 +95,6 @@ getNewQuestion = () => {
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
-
 
 const submitButton = document.getElementById('submit-button'); // Add an ID to your submit button in HTML
 
@@ -112,10 +118,16 @@ choices.forEach((choice) => {
             correctChoice.parentElement.classList.add('correct');
         }
 
+        // Score update logic
         if (classToApply === 'correct') {
-            incrementScore(CORRECT_BONUS);
+            // Set score to 10 if correct
+            score = 10;
+        } else {
+            // Set score to 0 if incorrect
+            score = 0;
         }
 
+        scoreText.innerText = score;
         selectedChoice.parentElement.classList.add(classToApply);
     });
 });
