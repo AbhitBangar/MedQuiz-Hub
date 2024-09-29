@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizExam</title>
+    <link rel="stylesheet" href="../selcset.css">
+    <link rel="icon" type="image/jpg" href="../../assets/collegelogo.jpg">
+</head>
+<body>
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <img src="../../assets/collegelogo.jpg" alt="Logo">
+            <h1 style="text-align: center;">Ashvin Rural Ayurvedic College,<br> Manachi Hill, Sangamner</h1>
+            <h3> Dr.Vikram Shelavale</h3>
+            <h3>Assosiate Prof. (B.A.M.S, M.D)</h3>
+            <h3>Department: Kaumarbhritya</h3> <br> <br>
+    <div class="slecset">
+        <button class="btn" data-set="set1">Set 1</button>
+        <button class="btn" data-set="set2">Set 2</button>
+        <button class="btn" data-set="set3">Set 3</button>
+        <button class="btn" data-set="set4">Set 4</button>
+        <button class="btn" data-set="set5">Set 5</button>
+        <button class="btn" data-set="set6">Set 6</button>
+
+    </div>
+
+    <script>
+        // Event listener for set selection buttons
+        const setButtons = document.querySelectorAll('.btn');
+
+        setButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const selectedSet = e.target.dataset.set;
+                localStorage.setItem('selectedSet', selectedSet);  // Save selected set to localStorage
+                window.location.href = './रसायनशास्त्र_भैषज्यकल्पना.html';  // Redirect to quiz page
+            });
+        });
+    </script>
+</body>
+</html>
