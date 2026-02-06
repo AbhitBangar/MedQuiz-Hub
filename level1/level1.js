@@ -1,22 +1,26 @@
 const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
-const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
+const timerDisplay = document.getElementById('timer');
+const actionButtons = document.getElementById('action-buttons');
+const nextQuestionButton = document.getElementById('next-question-button');
+const showAnswerButton = document.getElementById('show-answer-button');
+const startContainer = document.getElementById('start-container');
+const startTimerButton = document.getElementById('start-timer-button');
+const answerContainer = document.getElementById('answer-container');
+const answerText = document.getElementById('answer-text');
 
 let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
 let questionCounter = 0;
-let availableQuesions = [];
-
+let availableQuestions = [];
 let questions = [];
+let timerInterval;
+let timeLeft = 10;
+let timerStarted = false;
 
-//Progress Bar
-const CORRECT_BONUS = 10;
-let MAX_QUESTIONS = 30;
+let MAX_QUESTIONS = 20;
 
 fetch('./questions.json')
     .then((res) => {
@@ -58,103 +62,118 @@ fetch('./questions.json')
         console.error("There was an error fetching the questions:", err);
     });
 
-
-
-startGame = () => {
+const startGame = () => {
     questionCounter = 0;
-    score = 0;
-    availableQuesions = [...questions];
+    availableQuestions = [...questions];
     getNewQuestion();
     game.classList.remove('hidden');
     loader.classList.add('hidden');
 };
 
-getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
-        // Go to the end page
+const getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         return window.location.assign('../end.html');
     }
 
-    // Reset score to 0 for every new question
-    score = 0;
-    scoreText.innerText = score; // Update the score display
-
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
-
-    // Update the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-    // Remove the 'correct' and 'incorrect' classes from all choice containers
-    choices.forEach((choice) => {
-        choice.parentElement.classList.remove('correct', 'incorrect');
-    });
-
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-    currentQuestion = availableQuesions[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
-    choices.forEach((choice) => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
-    });
+    availableQuestions.splice(questionIndex, 1);
 
-    availableQuesions.splice(questionIndex, 1);
-    acceptingAnswers = true;
+    // Reset timer and UI for new question
+    resetTimer();
+    hideActionButtons();
+    showStartButton();
 };
 
+const showStartButton = () => {
+    startContainer.classList.remove('hidden');
+    actionButtons.classList.add('hidden');
+    answerContainer.classList.add('hidden');
+    timerStarted = false;
+};
 
-const submitButton = document.getElementById('submit-button'); // Add an ID to your submit button in HTML
+const hideStartButton = () => {
+    startContainer.classList.add('hidden');
+};
 
-choices.forEach((choice) => {
-    choice.addEventListener('click', (e) => {
-        if (!acceptingAnswers) return;
+const showActionButtons = () => {
+    actionButtons.classList.remove('hidden');
+};
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-        const correctAnswer = currentQuestion.answer;
+const hideActionButtons = () => {
+    actionButtons.classList.add('hidden');
+};
 
-        const classToApply =
-            selectedAnswer == correctAnswer ? 'correct' : 'incorrect';
+const startTimer = () => {
+    timeLeft = 10;
+    timerDisplay.innerText = timeLeft;
+    startContainer.classList.add('hidden');
+    timerStarted = true;
 
-        // Highlight the correct answer in green
-        if (correctAnswer != selectedAnswer) {
-            const correctChoice = document.querySelector(
-                `.choice-text[data-number="${correctAnswer}"]`
-            );
-            correctChoice.parentElement.classList.add('correct');
+    // Show Show Answer button when timer starts
+    actionButtons.classList.remove('hidden');
+    showAnswerButton.classList.remove('hidden');
+    nextQuestionButton.classList.add('hidden');
+    answerContainer.classList.add('hidden');
+
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.innerText = timeLeft;
+
+        // Change timer color when time is running out
+        if (timeLeft <= 10) {
+            timerDisplay.classList.add('warning');
         }
 
-        // Score update logic
-        if (classToApply === 'correct') {
-            // Set score to 10 if correct
-            score = 10;
-        } else {
-            // Set score to 0 if incorrect
-            score = 0;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            // When timer runs out, hide Show Answer button and show it as the only option
+            showAnswerButton.classList.remove('hidden');
+            nextQuestionButton.classList.add('hidden');
         }
-
-        scoreText.innerText = score;
-        selectedChoice.parentElement.classList.add(classToApply);
-    });
-});
-
-// Add an event listener to the Submit button
-submitButton.addEventListener('click', () => {
-    // Remove the event listeners from all choices to prevent further clicks
-    choices.forEach((choice) => {
-        choice.removeEventListener('click', () => {});
-    });
-
-    // Wait for a moment and then show the correct answer
-    setTimeout(() => {
-        getNewQuestion();
     }, 1000);
+};
+
+const resetTimer = () => {
+    // Clear any existing timer
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+
+    // Reset display and remove warning class
+    timerDisplay.classList.remove('warning');
+    timerDisplay.innerText = '10';
+    timerStarted = false;
+};
+
+const showAnswer = () => {
+    clearInterval(timerInterval);
+
+    // Get the correct answer
+    const correctAnswer = currentQuestion['choice' + currentQuestion.answer];
+    answerText.innerText = correctAnswer;
+    answerContainer.classList.remove('hidden');
+
+    // Hide Show Answer button and show Next Question button
+    showAnswerButton.classList.add('hidden');
+    nextQuestionButton.classList.remove('hidden');
+};
+
+// Event Listeners
+nextQuestionButton.addEventListener('click', () => {
+    getNewQuestion();
 });
 
-incrementScore = (num) => {
-    score += num;
-    scoreText.innerText = score;
-};
+startTimerButton.addEventListener('click', () => {
+    startTimer();
+});
+
+showAnswerButton.addEventListener('click', () => {
+    showAnswer();
+});

@@ -19,11 +19,21 @@ function formatTextWithLineBreaks(text, maxLength = 10) {
     return result;
 }
 
-const subjects = ["अगदतंत्र", "द्रव्यगुण विज्ञान", "कौमारभृत्य", "कायचिकित्सा", "क्रियाशरीर", "प्रसूतीतंत्र आणि स्त्रीरोग","रसायनशास्त्र भैषज्यकल्पना", "रोगनिदान", "संहिता", "शालाक्य", "शल्यतंत्र", "स्वास्थवृत्त", "पंचकर्म", "रचनाशरीर"];
+// Subject mappings with their respective URLs
+const subjectUrls = {
+    "अगदतंत्र": "../subjects/agadtantr/angad.html",
+    "कायचिकित्सा": "../subjects/kayachikitsa/kayachi.html",
+    "कौमारभृत्य": "../subjects/kaumarbhrutya/kaumar.html",
+    "क्रियाशरीर": "../subjects/kriyasharir/kriyas.html",
+    "रसायनशास्त्र": "../subjects/rasayan/rasayan.html"
+};
+
+const subjects = ["अगदतंत्र", "कायचिकित्सा", "कौमारभृत्य", "क्रियाशरीर", "रसायनशास्त्र"];
 
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
+const selectedSegmentBtn = document.getElementById("selected-segment-btn");
 
 const rotationValues = generateRotationValues(subjects.length);
 const data = generateData(subjects.length);
@@ -79,8 +89,27 @@ let myChart = new Chart(wheel, {
 });
 
 // Display value based on the randomAngle
-const valueGenerator = () => {
+const valueGenerator = (angle) => {
     spinBtn.disabled = false;
+    
+    // Calculate which segment is selected based on the final angle
+    const normalizedAngle = ((angle % 360) + 360) % 360;
+    const segmentAngle = 360 / subjects.length;
+    const selectedIndex = Math.floor(normalizedAngle / segmentAngle);
+    const selectedSubject = subjects[selectedIndex];
+    
+    // Update final value display
+    finalValue.innerHTML = `<p>Selected: ${selectedSubject}</p>`;
+    
+    // Show and configure the selected segment button
+    selectedSegmentBtn.textContent = selectedSubject;
+    selectedSegmentBtn.href = subjectUrls[selectedSubject];
+    selectedSegmentBtn.style.display = 'inline-flex';
+    
+    // Add visible class for animation
+    setTimeout(() => {
+        selectedSegmentBtn.classList.add('visible');
+    }, 100);
 };
 
 // Spinner count
@@ -91,10 +120,15 @@ let resultValue = 101;
 // Start spinning
 spinBtn.addEventListener("click", () => {
     spinBtn.disabled = true;
-    // Empty final value
-    // finalValue.innerHTML = `<p>Good Luck!</p>`;
+    
+    // Hide the selected segment button and reset animation
+    selectedSegmentBtn.classList.remove('visible');
+    selectedSegmentBtn.style.display = 'none';
+    finalValue.innerHTML = '';
+    
     // Generate random degrees to stop at
     let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
+    
     // Interval for rotation animation
     let rotationInterval = window.setInterval(() => {
         // Set rotation for pie chart
