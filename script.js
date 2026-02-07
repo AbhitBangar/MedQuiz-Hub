@@ -3,8 +3,8 @@
 // Valid credentials
 const studentCredentials = [
     {
-        username: "student",
-        password: "student123"
+        username: "Student",
+        password: "Student@123"
     },
     {
         username: "Abhit Bangar",
