@@ -19,6 +19,35 @@ function formatTextWithLineBreaks(text, maxLength = 10) {
     return result;
 }
 
+// Get subject from URL parameter
+function getSubjectFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('subject') || 'agadtantr'; // Default to agadtantr
+}
+
+// Load questions from localStorage
+function loadQuestionsFromStorage() {
+    const key = 'level2'; // Direct questions for level2
+    const storedQuestions = localStorage.getItem(key);
+    
+    if (storedQuestions) {
+        const questions = JSON.parse(storedQuestions);
+        return questions;
+    } else {
+        // Return empty array if no custom questions exist
+        return [];
+    }
+}
+
+// Load subjects dynamically based on available questions
+function loadSubjectsFromStorage() {
+    const allSubjects = ["अगदतंत्र", "कायचिकित्सा", "कौमारभृत्य", "क्रियाशरीर", "रसायनशास्त्र"];
+    const availableSubjects = [];
+    
+    // Always show all subjects for level2 wheel
+    return allSubjects;
+}
+
 // Subject mappings with their respective URLs
 const subjectUrls = {
     "अगदतंत्र": "../subjects/agadtantr/angad.html",
@@ -28,7 +57,7 @@ const subjectUrls = {
     "रसायनशास्त्र": "../subjects/rasayan/rasayan.html"
 };
 
-const subjects = ["अगदतंत्र", "कायचिकित्सा", "कौमारभृत्य", "क्रियाशरीर", "रसायनशास्त्र"];
+const subjects = loadSubjectsFromStorage();
 
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");

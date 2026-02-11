@@ -18,10 +18,10 @@ body {
 header {
     background: linear-gradient(145deg, #6600CC, #7700EE);
     color: #ffffff;
+    font-size: 1.4rem;
     text-align: center;
-    padding: 2rem;
-    font-size: 2.2rem;
-    font-weight: 800;
+    padding: 1.5rem;
+    font-weight: 600;
     letter-spacing: 1px;
     box-shadow: 0 4px 12px rgba(107, 127, 215, 0.3);
     position: sticky;

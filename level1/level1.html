@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QuizExam</title>
-    <link rel="stylesheet" href="../style.css" />
+    <title>Rapid Fire Quiz - Level 1</title>
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
     <link rel="stylesheet" href="./level1.css" />
     <link rel="icon" type="image/jpg" href="../assets/collegelogo.jpg">
 </head>
 <body>
-    <div class="container">
-        <div id="loader"></div>
-        <div id="game" class="justify-center flex-column hidden">
-            <div id="hud">
-                <div id="hud-item">
-                    <p id="progressText" class="hud-prefix">
-                        Question
-                    </p>
-                    <div id="progressBar">
-                        <div id="progressBarFull"></div>
+    <header>
+        <h1>🔥 Rapid Fire Quiz</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div id="loader"></div>
+            <div id="game" class="justify-center flex-column hidden">
+                <div id="hud">
+                    <div id="hud-item">
+                        <p id="progressText" class="hud-prefix">
+                            Question
+                        </p>
+                        <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <h2 id="question"></h2>
-            
-            <div id="answer-container" class="hidden">
-                <div id="answer-label">Correct Answer:</div>
-                <div id="answer-text"></div>
-            </div>
-            
-            <div id="timer-container">
-                <div id="timer">10</div>
-                <div id="timer-label">seconds</div>
-            </div>
-            
-            <div id="start-container">
-                <button id="start-timer-button">Start Timer</button>
-            </div>
-            
-            <div id="action-buttons" class="hidden">
-                <button id="show-answer-button">Show Answer</button>
-                <button id="next-question-button">Next Question</button>
+                
+                <h2 id="question"></h2>
+                
+                <div id="answer-container" class="hidden">
+                    <div id="answer-label">Correct Answer:</div>
+                    <div id="answer-text"></div>
+                </div>
+                
+                <div id="timer-container">
+                    <div id="timer">10</div>
+                    <div id="timer-label">seconds</div>
+                </div>
+                
+                <div id="start-container">
+                    <button id="start-timer-button">Start Timer</button>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="./level1.js"></script>
 </body>
 </html>

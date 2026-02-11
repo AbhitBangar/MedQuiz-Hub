@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Questions - QuizExam</title>
+    <link rel="icon" type="image/jpg" href="../assets/collegelogo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./edit-questions.css"/>
+</head>
+<body>
+    <header>
+        <h1>Edit Questions</h1>
+    </header>
+    
+    <div class="container">
+        <div class="level-selector">
+            <label for="level-select">Select Level:</label>
+            <select id="level-select">
+                <option value="">Choose a level...</option>
+                <option value="level1">Level 1 - Direct Questions</option>
+                <option value="level2">Level 2 - Subject Selection</option>
+                <option value="level3">Level 3 - Subject-Specific Questions</option>
+            </select>
+        </div>
+
+        <!-- Level 1 Section -->
+        <div id="level1-section" class="level-section hidden">
+            <div class="level-header">
+                <h3>Add Level 1 Rapid Fire Questions</h3>
+                <button class="btn-secondary" onclick="refreshLevel1Questions()">Refresh Questions</button>
+            </div>
+            <div class="question-form">
+                <h4>Rapid Fire Questions (Question + Answer)</h4>
+                <form id="add-level1-question-form">
+                    <div class="form-group">
+                        <label for="level1-question-text">Question:</label>
+                        <textarea id="level1-question-text" rows="3" placeholder="Enter the question" required></textarea>
+                        <small>Example: "Upadhātu of Rasa"</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level1-correct-answer">Correct Answer:</label>
+                        <input type="text" id="level1-correct-answer" placeholder="Enter the correct answer" required>
+                        <small>Example: "Raja"</small>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Add Rapid Fire Question</button>
+                </form>
+            </div>
+
+            <div class="questions-list">
+                <h3>Level 1 Rapid Fire Questions</h3>
+                <div id="level1-questions-container">
+                    <!-- Questions will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Level 2 Section -->
+        <div id="level2-section" class="level-section hidden">
+            <div class="question-form">
+                <h3>Add Level 2 Questions</h3>
+                <form id="add-level2-question-form">
+                    <div class="form-group">
+                        <label for="level2-question-text">Question:</label>
+                        <textarea id="level2-question-text" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level2-option-a">Option A:</label>
+                        <input type="text" id="level2-option-a" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level2-option-b">Option B:</label>
+                        <input type="text" id="level2-option-b" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level2-option-c">Option C:</label>
+                        <input type="text" id="level2-option-c" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level2-option-d">Option D:</label>
+                        <input type="text" id="level2-option-d" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level2-correct-answer">Correct Answer:</label>
+                        <select id="level2-correct-answer" required>
+                            <option value="">Select correct answer...</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Add Level 2 Question</button>
+                </form>
+            </div>
+
+            <div class="questions-list">
+                <h3>Level 2 Questions</h3>
+                <div id="level2-questions-container">
+                    <!-- Questions will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Level 3 Section -->
+        <div id="level3-section" class="level-section hidden">
+            <div class="subject-selector">
+                <label for="level3-subject-select">Select Subject:</label>
+                <select id="level3-subject-select">
+                    <option value="">Choose a subject...</option>
+                    <option value="agadtantr">अगदतंत्र</option>
+                    <option value="kayachikitsa">कायचिकित्सा</option>
+                    <option value="kaumarbhrutya">कौमारभृत्य</option>
+                    <option value="kriyasharir">क्रियाशरीर</option>
+                    <option value="rasayan">रसायनशास्त्र</option>
+                </select>
+            </div>
+
+            <div class="question-form">
+                <h3>Add Level 3 Questions</h3>
+                <form id="add-level3-question-form">
+                    <div class="form-group">
+                        <label for="level3-question-text">Question:</label>
+                        <textarea id="level3-question-text" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level3-option-a">Option A:</label>
+                        <input type="text" id="level3-option-a" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level3-option-b">Option B:</label>
+                        <input type="text" id="level3-option-b" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level3-option-c">Option C:</label>
+                        <input type="text" id="level3-option-c" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level3-option-d">Option D:</label>
+                        <input type="text" id="level3-option-d" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level3-correct-answer">Correct Answer:</label>
+                        <select id="level3-correct-answer" required>
+                            <option value="">Select correct answer...</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Add Level 3 Question</button>
+                </form>
+            </div>
+
+            <div class="questions-list">
+                <h3>Level 3 Questions</h3>
+                <div id="level3-questions-container">
+                    <!-- Questions will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="home.html" class="btn-secondary">Back to Home</a>
+    </div>
+
+    <script src="./edit-questions-json.js"></script>
+</body>
+</html>

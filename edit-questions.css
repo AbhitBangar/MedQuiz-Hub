@@ -1,0 +1,441 @@
+/* Edit Questions Page - Ashvin College Theme */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Arial', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6B7FD7 0%, #7B6FC1 100%);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(145deg, #6600CC, #7700EE);
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(107, 127, 215, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Container */
+.container {
+    width: 95%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 2rem;
+    box-shadow: 0 2rem 4rem rgba(107, 127, 215, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(123,0,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(123,0,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(123,0,255,0.03)"/><circle cx="10" cy="50" r="0.5" fill="rgba(123,0,255,0.03)"/><circle cx="90" cy="50" r="0.5" fill="rgba(123,0,255,0.03)"/><circle cx="50" cy="90" r="0.5" fill="rgba(123,0,255,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Level Selector */
+.level-selector {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.level-selector label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.level-selector select {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #6600CC;
+    border-radius: 0.8rem;
+    background: white;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.level-selector select:focus {
+    outline: none;
+    border-color: #7700EE;
+    box-shadow: 0 0 0 3px rgba(118, 0, 238, 0.1);
+}
+
+/* Level Sections */
+.level-section {
+    margin-bottom: 2rem;
+}
+
+.level-section.hidden {
+    display: none;
+}
+
+.level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.level-header h3 {
+    color: #6600CC;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Subject Selector (for Level 3) */
+.level-section .subject-selector {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.level-section .subject-selector label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.level-section .subject-selector select {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #6600CC;
+    border-radius: 0.8rem;
+    background: white;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.level-section .subject-selector select:focus {
+    outline: none;
+    border-color: #7700EE;
+    box-shadow: 0 0 0 3px rgba(118, 0, 238, 0.1);
+}
+
+/* Question Form */
+.question-form {
+    background: linear-gradient(145deg, #f8f9fa, #ebebf5);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(123, 0, 255, 0.15);
+}
+
+.question-form h3 {
+    color: #6600CC;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.8rem;
+    background: white;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #6600CC;
+    box-shadow: 0 0 0 3px rgba(102, 0, 204, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(145deg, #6600CC, #7700EE);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0.5rem 1.5rem rgba(102, 0, 204, 0.3);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 2rem rgba(102, 0, 204, 0.4);
+    background: linear-gradient(145deg, #7700EE, #6600CC);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: linear-gradient(145deg, #6c757d, #495057);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0.5rem 1.5rem rgba(108, 117, 125, 0.3);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 2rem rgba(108, 117, 125, 0.4);
+    background: linear-gradient(145deg, #495057, #6c757d);
+}
+
+.btn-danger {
+    background: linear-gradient(145deg, #dc3545, #c82333);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0.3rem 1rem rgba(220, 53, 69, 0.3);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1.5rem rgba(220, 53, 69, 0.4);
+    background: linear-gradient(145deg, #c82333, #dc3545);
+}
+
+/* Questions List */
+.questions-list {
+    background: linear-gradient(145deg, #f8f9fa, #ebebf5);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(123, 0, 255, 0.15);
+}
+
+.questions-list h3 {
+    color: #6600CC;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.question-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #6600CC;
+    transition: all 0.3s ease;
+}
+
+.question-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.question-item.rapid-fire {
+    border-left: 4px solid #ff6b35;
+    background: linear-gradient(145deg, #fff5f0, #ffe8e0);
+}
+
+.rapid-fire-badge {
+    display: inline-block;
+    background: linear-gradient(145deg, #ff6b35, #ff5722);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.question-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.option {
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: #495057;
+    border: 1px solid #e0e0e0;
+}
+
+.option.correct {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    font-weight: 600;
+}
+
+.question-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Back Button */
+.back-button {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+        padding: 1.2rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 95%;
+    }
+
+    .question-form {
+        padding: 1rem;
+    }
+
+    .questions-list {
+        padding: 1rem;
+    }
+
+    .question-options {
+        grid-template-columns: 1fr;
+    }
+
+    .question-actions {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+        margin: 1rem auto;
+        width: 98%;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-danger {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
