@@ -8,6 +8,10 @@ const startContainer = document.getElementById('start-container');
 const startTimerButton = document.getElementById('start-timer-button');
 const answerContainer = document.getElementById('answer-container');
 const answerText = document.getElementById('answer-text');
+const resultsContainer = document.getElementById('results-container');
+const resultsMessage = document.getElementById('results-message');
+const restartBtn = document.getElementById('restart-btn');
+const homeBtn = document.getElementById('home-btn');
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -66,7 +70,8 @@ const startGame = () => {
 
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        return window.location.assign('../end.html');
+        showResults();
+        return;
     }
 
     questionCounter++;
@@ -194,10 +199,46 @@ const showAnswer = () => {
     startTimerButton.onclick = getNewQuestion;
 };
 
+// Show Results when quiz is complete
+const showResults = () => {
+    // Clear any running timer
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+    
+    // Hide the entire game container
+    game.classList.add('hidden');
+    
+    // Show results
+    resultsContainer.classList.remove('hidden');
+    resultsMessage.textContent = `Great job! You've completed all ${MAX_QUESTIONS} questions!`;
+};
+
+// Restart Quiz
+const restartQuiz = () => {
+    // Hide results
+    resultsContainer.classList.add('hidden');
+    
+    // Show the game container
+    game.classList.remove('hidden');
+    
+    // Reset and start new game
+    startGame();
+};
+
+// Go Home
+const goHome = () => {
+    window.location.href = '../select.html';
+};
+
 // Initialize the game
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Level 1 page loaded, initializing...');
     
     // Load questions from JSON file
     loadQuestionsFromJSON();
+    
+    // Add event listeners for restart and home buttons
+    restartBtn.addEventListener('click', restartQuiz);
+    homeBtn.addEventListener('click', goHome);
 });

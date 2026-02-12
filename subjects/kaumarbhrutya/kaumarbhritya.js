@@ -1,116 +1,29 @@
-// MCQ Questions Data
+// Kaumarbhritya Questions Data
 const questions = [
-    // Set 1
     {
-        question: "The embryological structure responsible for formation of adrenal medulla is:",
-        options: ["A. Mesoderm", "B. Endoderm", "C. Neural crest cells", "D. Ectoderm"],
+        question: "Sample question 1 for Kaumarbhritya",
+        options: ["A. Option 1", "B. Option 2", "C. Correct Answer", "D. Option 4"],
         correct: 2
     },
     {
-        question: "The most common site of duodenal ulcer is:",
-        options: ["A. First part – anterior wall", "B. First part – posterior wall", "C. Second part", "D. Third part"],
+        question: "Sample question 2 for Kaumarbhritya",
+        options: ["A. Option 1", "B. Correct Answer", "C. Option 3", "D. Option 4"],
+        correct: 1
+    },
+    {
+        question: "Sample question 3 for Kaumarbhritya",
+        options: ["A. Correct Answer", "B. Option 2", "C. Option 3", "D. Option 4"],
         correct: 0
     },
     {
-        question: "Which nerve is damaged in Erb's palsy?",
-        options: ["A. C5–C6", "B. C6–C7", "C. C7–C8", "D. C8–T1"],
-        correct: 0
-    },
-    // Set 2
-    {
-        question: "In Prameha, which Dhatu is affected first according to classics?",
-        options: ["A. Rasa", "B. Rakta", "C. Meda", "D. Mamsa"],
-        correct: 2
-    },
-    {
-        question: "In bronchial asthma, the most important pathological change is:",
-        options: ["A. Alveolar collapse", "B. Bronchial smooth muscle hypertrophy", "C. Pleural effusion", "D. Pulmonary fibrosis"],
-        correct: 1
-    },
-    {
-        question: "The drug of choice for acute anaphylaxis:",
-        options: ["A. Hydrocortisone", "B. Chlorpheniramine", "C. Adrenaline", "D. Salbutamol"],
-        correct: 2
-    },
-    // Set 3
-    {
-        question: "The largest dural venous sinus is:",
-        options: ["A. Straight sinus", "B. Transverse sinus", "C. Superior sagittal sinus", "D. Cavernous sinus"],
-        correct: 2
-    },
-    {
-        question: "The artery most commonly injured in fracture neck of humerus:",
-        options: ["A. Axillary artery", "B. Brachial artery", "C. Radial artery", "D. Subclavian artery"],
-        correct: 0
-    },
-    {
-        question: "Which investigation is most specific for DVT?",
-        options: ["A. D-dimer", "B. Venography", "C. Doppler ultrasound", "D. CT scan"],
-        correct: 1
-    },
-    // Set 4
-    {
-        question: "According to Charaka, Shareera is best defined as:",
-        options: ["A. Panchabhautika deha", "B. Combination of Dosha–Dhatu–Mala", "C. Chetana adhisthana", "D. All of the above"],
+        question: "Sample question 4 for Kaumarbhritya",
+        options: ["A. Option 1", "B. Option 2", "C. Option 3", "D. Correct Answer"],
         correct: 3
     },
     {
-        question: "Coin test is used in diagnosis of:",
-        options: ["A. Pleural effusion", "B. Pneumothorax", "C. Lung abscess", "D. Bronchial asthma"],
+        question: "Sample question 5 for Kaumarbhritya",
+        options: ["A. Option 1", "B. Correct Answer", "C. Option 3", "D. Option 4"],
         correct: 1
-    },
-    {
-        question: "Ritu Sandhi period consists of:",
-        options: ["A. 7 days", "B. 14 days", "C. 21 days", "D. 30 days"],
-        correct: 1
-    },
-    // Set 5
-    {
-        question: "In infant development, social smile appears at:",
-        options: ["A. 1 month", "B. 2 months", "C. 3 months", "D. 4 months"],
-        correct: 1
-    },
-    {
-        question: "Which vitamin deficiency causes both osteomalacia and hypocalcemia?",
-        options: ["A. Vitamin A", "B. Vitamin D", "C. Vitamin K", "D. Vitamin C"],
-        correct: 1
-    },
-    {
-        question: "Which drug is used as antidote in organophosphate poisoning?",
-        options: ["A. Naloxone", "B. Atropine", "C. Flumazenil", "D. Vitamin K"],
-        correct: 1
-    },
-    // Set 6
-    {
-        question: "The narrowest part of male urethra:",
-        options: ["A. Prostatic urethra", "B. Membranous urethra", "C. Spongy urethra", "D. External meatus"],
-        correct: 3
-    },
-    {
-        question: "The valve most commonly affected in rheumatic heart disease:",
-        options: ["A. Aortic", "B. Tricuspid", "C. Pulmonary", "D. Mitral"],
-        correct: 3
-    },
-    {
-        question: "First line management of status asthmaticus:",
-        options: ["A. Oral steroids", "B. Inhaled salbutamol", "C. IV antibiotics", "D. Theophylline"],
-        correct: 1
-    },
-    // Set 7
-    {
-        question: "Hridaya according to Ayurveda is primarily the seat of:",
-        options: ["A. Vata", "B. Pitta", "C. Kapha", "D. Chetana"],
-        correct: 3
-    },
-    {
-        question: "Graafian follicle is present in:",
-        options: ["A. Medulla of ovary", "B. Cortex of ovary", "C. Fallopian tube", "D. Endometrium"],
-        correct: 1
-    },
-    {
-        question: "Pakshaghata is mainly due to vitiation of:",
-        options: ["A. Vyana Vata", "B. Udana Vata", "C. Prana Vata", "D. Samana Vata"],
-        correct: 0
     }
 ];
 
@@ -125,7 +38,6 @@ const questionText = document.querySelector('.question-text');
 const optionsContainer = document.querySelector('.options-container');
 const resultMessage = document.querySelector('.result-message');
 const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
 const progressFill = document.querySelector('.progress-fill');
 
 // Initialize Quiz
@@ -137,16 +49,12 @@ function initQuiz() {
 function loadQuestion() {
     const question = questions[currentQuestion];
     
-    // Update question number
+    // Update question number and text
     questionNumber.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
-    
-    // Update question text
     questionText.textContent = question.question;
     
-    // Clear previous options
+    // Clear and populate options
     optionsContainer.innerHTML = '';
-    
-    // Create option buttons
     question.options.forEach((option, index) => {
         const button = document.createElement('button');
         button.className = 'option-btn';
@@ -161,7 +69,6 @@ function loadQuestion() {
     resultMessage.textContent = '';
     resultMessage.className = 'result-message';
     nextBtn.style.display = 'none';
-    prevBtn.style.display = 'none';
     
     // Update progress bar
     updateProgressBar();
@@ -198,9 +105,8 @@ function selectAnswer(button, selectedIndex) {
     // Show result message
     showResultMessage(isCorrect);
     
-    // Show navigation buttons
+    // Show next button
     nextBtn.style.display = 'inline-flex';
-    prevBtn.style.display = currentQuestion > 0 ? 'inline-flex' : 'none';
 }
 
 // Show Result Message
@@ -222,14 +128,6 @@ function nextQuestion() {
         loadQuestion();
     } else {
         showFinalResult();
-    }
-}
-
-// Previous Question
-function previousQuestion() {
-    if (currentQuestion > 0) {
-        currentQuestion--;
-        loadQuestion();
     }
 }
 
@@ -264,7 +162,7 @@ function showFinalResult() {
     quizContainer.innerHTML = `
         <div class="final-result">
             <div class="result-header">
-                <h2>${emoji} Quiz Complete!</h2>
+                <h2>${emoji} Kaumarbhritya Quiz Complete!</h2>
             </div>
             <div class="result-stats">
                 <div class="score-display">
@@ -280,7 +178,7 @@ function showFinalResult() {
             </div>
             <div class="action-buttons">
                 <button class="retry-btn" onclick="location.reload()">Try Again</button>
-                <button class="home-btn" onclick="window.location.href='../select.html'">Home</button>
+                <button class="home-btn" onclick="window.location.href='../../select.html'">Home</button>
             </div>
         </div>
     `;
@@ -375,7 +273,6 @@ function showFinalResult() {
 
 // Event Listeners
 nextBtn.addEventListener('click', nextQuestion);
-prevBtn.addEventListener('click', previousQuestion);
 
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', initQuiz);

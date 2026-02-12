@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QuizExam</title>
+    <title>QuizExam - Level 2</title>
     <!-- Google Font -->
     <link rel="icon" type="image/jpg" href="../assets/collegelogo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
@@ -10,28 +10,35 @@
     <!-- Stylesheet -->
 </head>
 <header>
-    <h1>🛞 Spin the Subject</h1>
+    <h1>📝 Multiple Choice Questions</h1>
 </header>
 <body>
-  <div>
-      <div class="container">
-        <canvas id="wheel"></canvas>
-        <button id="spin-btn">Spin</button>
-        <img src="../assets/spin arrow.jpg" alt="spinner arrow"/>
-        <div id="final-value">
-          <!-- <p>Let's Spin the Wheel</p> -->
+  <div class="quiz-container">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="question-container">
+        <div class="question-header">
+          <span class="question-number">Question 1 of 21</span>
         </div>
-        <button id="selected-segment-btn" style="display: none;">
-            <!-- Selected subject will appear here -->
-        </button>
+        <div class="question-text">
+          The embryological structure responsible for formation of adrenal medulla is:
+        </div>
+        <div class="options-container">
+          <button class="option-btn" data-correct="false">A. Mesoderm</button>
+          <button class="option-btn" data-correct="false">B. Endoderm</button>
+          <button class="option-btn" data-correct="true">C. Neural crest cells</button>
+          <button class="option-btn" data-correct="false">D. Ectoderm</button>
+        </div>
+        <div class="result-container">
+          <div class="result-message"></div>
+          <div class="navigation-buttons">
+            <button class="prev-btn" style="display: none;">Previous Question</button>
+            <button class="next-btn" style="display: none;">Next Question</button>
+          </div>
+        </div>
       </div>
   </div>
-    <!-- Chart JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <!-- Chart JS Plugin for displaying text over chart -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
-
     <script src="level2.js"></script>
-
 </body>
 </html>
