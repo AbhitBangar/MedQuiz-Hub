@@ -1,1 +1,134 @@
-{"questions": [{"question": "Neonatal period lasts up to:", "options": ["A. 7 days", "B. 14 days", "C. 28 days", "D. 1 month"], "correct": 2}, {"question": "Phakka mainly affects:", "options": ["A. Bone", "B. Muscle", "C. Nervous system", "D. Digestive system"], "correct": 0}, {"question": "Lehana is advised for:", "options": ["A. Immunity", "B. Growth", "C. Digestion", "D. All"], "correct": 3}, {"question": "Balashosha resembles:", "options": ["A. Rickets", "B. Scurvy", "C. Marasmus", "D. Kwashiorkor"], "correct": 2}, {"question": "Closure of anterior fontanelle occurs at:", "options": ["A. 6 months", "B. 9 months", "C. 1218 months", "D. 24 months"], "correct": 2}, {"question": "Moro reflex disappears by:", "options": ["A. 2 months", "B. 4 months", "C. 6 months", "D. 9 months"], "correct": 1}, {"question": "Colostrum is rich in:", "options": ["A. IgA", "B. IgG", "C. IgM", "D. IgE"], "correct": 0}, {"question": "Kumaragara is described by:", "options": ["A. Charaka", "B. Sushruta", "C. Kashyapa", "D. Vagbhata"], "correct": 2}, {"question": "Weaning should start at:", "options": ["A. 4 months", "B. 5 months", "C. 6 months", "D. 1 year"], "correct": 2}, {"question": "Dantodbhava jwara occurs due to:", "options": ["A. Infection", "B. Pitta vriddhi", "C. Vata disturbance", "D. Kapha accumulation"], "correct": 1}, {"question": "First tooth to erupt:", "options": ["A. Upper central incisor", "B. Lower central incisor", "C. Canine", "D. First molar"], "correct": 1}, {"question": "Samskara done immediately after birth:", "options": ["A. Namakarana", "B. Jatakarma", "C. Annaprashana", "D. Karnavedha"], "correct": 1}, {"question": "Vaccine at birth:", "options": ["A. DPT", "B. OPV", "C. BCG", "D. Measles"], "correct": 2}]}
+{
+    "questions": [
+        {
+            "question": "Neonatal period lasts up to:",
+            "options": [
+                "A. 7 days",
+                "B. 14 days",
+                "C. 28 days",
+                "D. 1 month"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Phakka mainly affects:",
+            "options": [
+                "A. Bone",
+                "B. Muscle",
+                "C. Nervous system",
+                "D. Digestive system"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Lehana is advised for:",
+            "options": [
+                "A. Immunity",
+                "B. Growth",
+                "C. Digestion",
+                "D. All"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Balashosha resembles:",
+            "options": [
+                "A. Rickets",
+                "B. Scurvy",
+                "C. Marasmus",
+                "D. Kwashiorkor"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Closure of anterior fontanelle occurs at:",
+            "options": [
+                "A. 6 months",
+                "B. 9 months",
+                "C. 12-18 months",
+                "D. 24 months"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Moro reflex disappears by:",
+            "options": [
+                "A. 2 months",
+                "B. 4 months",
+                "C. 6 months",
+                "D. 9 months"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Colostrum is rich in:",
+            "options": [
+                "A. IgA",
+                "B. IgG",
+                "C. IgM",
+                "D. IgE"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Kumaragara is described by:",
+            "options": [
+                "A. Charaka",
+                "B. Sushruta",
+                "C. Kashyapa",
+                "D. Vagbhata"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Weaning should start at:",
+            "options": [
+                "A. 4 months",
+                "B. 5 months",
+                "C. 6 months",
+                "D. 1 year"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Dantodbhava jwara occurs due to:",
+            "options": [
+                "A. Infection",
+                "B. Pitta vriddhi",
+                "C. Vata disturbance",
+                "D. Kapha accumulation"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "First tooth to erupt:",
+            "options": [
+                "A. Upper central incisor",
+                "B. Lower central incisor",
+                "C. Canine",
+                "D. First molar"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Samskara done immediately after birth:",
+            "options": [
+                "A. Namakarana",
+                "B. Jatakarma",
+                "C. Annaprashana",
+                "D. Karnavedha"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Vaccine at birth:",
+            "options": [
+                "A. DPT",
+                "B. OPV",
+                "C. BCG",
+                "D. Measles"
+            ],
+            "correct": 2
+        }
+    ]
+}

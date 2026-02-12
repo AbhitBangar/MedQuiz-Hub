@@ -1,1 +1,114 @@
-{"questions": [{"question": "Yakritodara is primarily due to vitiation of:", "options": ["A. Vata", "B. Pitta", "C. Kapha", "D. Tridosha"], "correct": 1}, {"question": "In Anuloma Rajayakshma, first Dhatu affected:", "options": ["A. Rasa", "B. Rakta", "C. Mamsa", "D. Ojas"], "correct": 0}, {"question": "Tamaka Shwasa worsens mainly at:", "options": ["A. Noon", "B. Morning", "C. Night", "D. After meals"], "correct": 2}, {"question": "Madhumeha differs from other Prameha due to:", "options": ["A. Kapha dominance", "B. Meda involvement", "C. Vata predominance", "D. Bahudrava shleshma"], "correct": 2}, {"question": "Grahani is seat of:", "options": ["A. Pachaka Pitta", "B. Samana Vata", "C. Agni", "D. All"], "correct": 3}, {"question": "Jeerna Jwara is considered:", "options": ["A. Sadhya", "B. Yapya", "C. Asadhya", "D. Aupadravika"], "correct": 1}, {"question": "Best Shodhana in Pittaja Pandu:", "options": ["A. Vamana", "B. Virechana", "C. Basti", "D. Nasya"], "correct": 1}, {"question": "Kasa is a disease of:", "options": ["A. Pranavaha srotas", "B. Rasavaha srotas", "C. Udakavaha srotas", "D. Annavaha srotas"], "correct": 0}, {"question": "Ojokshaya presents with:", "options": ["A. Gaurava", "B. Bhrama", "C. Ati-nidra", "D. Medovriddhi"], "correct": 1}, {"question": "Atisara becomes chronic due to:", "options": ["A. Kapha vriddhi", "B. Agnimandya", "C. Rakta dushti", "D. Ama pachana"], "correct": 1}, {"question": "Most dangerous complication of Jwara:", "options": ["A. Atisara", "B. Pralapa", "C. Murchha", "D. Tandra"], "correct": 2}]}
+{
+    "questions": [
+        {
+            "question": "Yakritodara is primarily due to vitiation of:",
+            "options": [
+                "A. Vata",
+                "B. Pitta",
+                "C. Kapha",
+                "D. Tridosha"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "In Anuloma Rajayakshma, first Dhatu affected:",
+            "options": [
+                "A. Rasa",
+                "B. Rakta",
+                "C. Mamsa",
+                "D. Ojas"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Tamaka Shwasa worsens mainly at:",
+            "options": [
+                "A. Noon",
+                "B. Morning",
+                "C. Night",
+                "D. After meals"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Madhumeha differs from other Prameha due to:",
+            "options": [
+                "A. Kapha dominance",
+                "B. Meda involvement",
+                "C. Vata predominance",
+                "D. Bahudrava shleshma"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Grahani is seat of:",
+            "options": [
+                "A. Pachaka Pitta",
+                "B. Samana Vata",
+                "C. Agni",
+                "D. All"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Jeerna Jwara is considered:",
+            "options": [
+                "A. Sadhya",
+                "B. Yapya",
+                "C. Asadhya",
+                "D. Aupadravika"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Best Shodhana in Pittaja Pandu:",
+            "options": [
+                "A. Vamana",
+                "B. Virechana",
+                "C. Basti",
+                "D. Nasya"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Kasa is a disease of:",
+            "options": [
+                "A. Pranavaha srotas",
+                "B. Rasavaha srotas",
+                "C. Udakavaha srotas",
+                "D. Annavaha srotas"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Ojokshaya presents with:",
+            "options": [
+                "A. Gaurava",
+                "B. Bhrama",
+                "C. Ati-nidra",
+                "D. Medovriddhi"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Atisara becomes chronic due to:",
+            "options": [
+                "A. Kapha vriddhi",
+                "B. Agnimandya",
+                "C. Rakta dushti",
+                "D. Ama pachana"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Most dangerous complication of Jwara:",
+            "options": [
+                "A. Atisara",
+                "B. Pralapa",
+                "C. Murchha",
+                "D. Tandra"
+            ],
+            "correct": 2
+        }
+    ]
+}

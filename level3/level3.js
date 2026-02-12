@@ -54,7 +54,7 @@ const subjectUrls = {
     "Kaumarbhritya": "../subjects/kaumarbhrutya/kaumarbhritya.html",
     "Prasuti Tantra and Striroga": "../subjects/prasuti/prasuti.html",
     "Panchakarma": "../subjects/panchkarm/panchakarma.html",
-    "Shalya Tantra": "../subjects/shalyatantr/shayatantr.html",
+    "Shalya Tantra": "../subjects/shalyatantr/shalyatantr.html",
     "Shalakya Tantra": "../subjects/shalyakya/shalakya.html",
     "Samhita Adhyayan 3": "../subjects/samhita/samhita.html"
 };

@@ -12,26 +12,26 @@
 </header>
 <body>
   <div class="quiz-container">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
       <div class="question-container">
         <div class="question-header">
-          <span class="question-number">Question 1 of 5</span>
+          <span class="question-number">Question 1 of 13</span>
         </div>
         <div class="question-text">
-          Sample question for Panchakarma:
+          Loading question...
         </div>
         <div class="options-container">
-          <button class="option-btn" data-correct="false">A. Option 1</button>
-          <button class="option-btn" data-correct="false">B. Option 2</button>
-          <button class="option-btn" data-correct="true">C. Correct Answer</button>
-          <button class="option-btn" data-correct="false">D. Option 4</button>
+          <!-- Options will be loaded dynamically -->
         </div>
         <div class="result-container">
           <div class="result-message"></div>
-          <button class="next-btn" style="display: none;">Next Question</button>
+          <div class="navigation-buttons">
+            <button class="prev-btn" style="display: none;">Previous Question</button>
+            <button class="next-btn" style="display: none;">Next Question</button>
+          </div>
         </div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
       </div>
   </div>
     <script src="panchakarma.js"></script>

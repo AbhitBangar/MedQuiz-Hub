@@ -1,1 +1,134 @@
-{"questions": [{"question": "Poorva Karma includes all EXCEPT:", "options": ["A. Deepana", "B. Pachana", "C. Snehana", "D. Raktamokshana"], "correct": 3}, {"question": "Best indication of Vamana:", "options": ["A. Pittaja jwara", "B. Kaphaja vyadhi", "C. Vata vyadhi", "D. Rakta dushti"], "correct": 1}, {"question": "Samsarjana krama starts after:", "options": ["A. Shamana", "B. Shodhana", "C. Langhana", "D. Brimhana"], "correct": 1}, {"question": "Sneha best for Vata:", "options": ["A. Taila", "B. Ghrita", "C. Vasa", "D. Majja"], "correct": 0}, {"question": "Classical sign of proper Snehana:", "options": ["A. Ati-nidra", "B. Snigdha varchas", "C. Hrillasa", "D. Chardi"], "correct": 1}, {"question": "Tikta ghrita basti is mainly useful in:", "options": ["A. Medoroga", "B. AsthiMajja gata vata", "C. Pittaja vikara", "D. Kapha vyadhi"], "correct": 1}, {"question": "Virechana is contraindicated in:", "options": ["A. Pittaja disorders", "B. Balavan rogi", "C. Garbhini", "D. Chronic disease"], "correct": 2}, {"question": "Best Anuvasana basti dravya:", "options": ["A. Kashaya", "B. Taila", "C. Kshara", "D. Madhu"], "correct": 1}, {"question": "Nasya acts mainly on:", "options": ["A. Hridaya", "B. Pakwashaya", "C. Shira", "D. Amashaya"], "correct": 2}, {"question": "Pratimarsha nasya can be given:", "options": ["A. Only morning", "B. Only evening", "C. Daily", "D. Alternate days"], "correct": 2}, {"question": "Kala basti consists of:", "options": ["A. 8 bastis", "B. 12 bastis", "C. 15 bastis", "D. 30 bastis"], "correct": 2}, {"question": "Avapeedana nasya is mainly for:", "options": ["A. Brimhana", "B. Shamana", "C. Shodhana", "D. Rasayana"], "correct": 2}, {"question": "Maximum effect of Panchakarma is on:", "options": ["A. Dosha only", "B. Dhatu only", "C. Mala only", "D. DoshaDhatuMala"], "correct": 3}]}
+{
+    "questions": [
+        {
+            "question": "Poorva Karma includes all EXCEPT:",
+            "options": [
+                "A. Deepana",
+                "B. Pachana",
+                "C. Snehana",
+                "D. Raktamokshana"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Best indication of Vamana:",
+            "options": [
+                "A. Pittaja jwara",
+                "B. Kaphaja vyadhi",
+                "C. Vata vyadhi",
+                "D. Rakta dushti"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Samsarjana krama starts after:",
+            "options": [
+                "A. Shamana",
+                "B. Shodhana",
+                "C. Langhana",
+                "D. Brimhana"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Sneha best for Vata:",
+            "options": [
+                "A. Taila",
+                "B. Ghrita",
+                "C. Vasa",
+                "D. Majja"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Classical sign of proper Snehana:",
+            "options": [
+                "A. Ati-nidra",
+                "B. Snigdha varchas",
+                "C. Hrillasa",
+                "D. Chardi"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Tikta ghrita basti is mainly useful in:",
+            "options": [
+                "A. Medoroga",
+                "B. AsthiMajja gata vata",
+                "C. Pittaja vikara",
+                "D. Kapha vyadhi"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Virechana is contraindicated in:",
+            "options": [
+                "A. Pittaja disorders",
+                "B. Balavan rogi",
+                "C. Garbhini",
+                "D. Chronic disease"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Best Anuvasana basti dravya:",
+            "options": [
+                "A. Kashaya",
+                "B. Taila",
+                "C. Kshara",
+                "D. Madhu"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Nasya acts mainly on:",
+            "options": [
+                "A. Hridaya",
+                "B. Pakwashaya",
+                "C. Shira",
+                "D. Amashaya"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Pratimarsha nasya can be given:",
+            "options": [
+                "A. Only morning",
+                "B. Only evening",
+                "C. Daily",
+                "D. Alternate days"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Kala basti consists of:",
+            "options": [
+                "A. 8 bastis",
+                "B. 12 bastis",
+                "C. 15 bastis",
+                "D. 30 bastis"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Avapeedana nasya is mainly for:",
+            "options": [
+                "A. Brimhana",
+                "B. Shamana",
+                "C. Shodhana",
+                "D. Rasayana"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Maximum effect of Panchakarma is on:",
+            "options": [
+                "A. Dosha only",
+                "B. Dhatu only",
+                "C. Mala only",
+                "D. DoshaDhatuMala"
+            ],
+            "correct": 3
+        }
+    ]
+}

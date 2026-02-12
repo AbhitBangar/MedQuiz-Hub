@@ -1,25 +1,19 @@
-// Kayachikitsa Questions Data
+// Load questions from JSON file
 let questions = [];
 
 // Load questions from JSON file
-fetch('./kayachikitsa.json')
-    .then(response => response.json())
-    .then(data => {
-        questions = data.questions;
-        initQuiz();
-    })
-    .catch(error => {
+async function loadQuestionsFromJSON() {
+    try {
+        const response = await fetch('./samhita.json');
+        const data = await response.json();
+        questions = data.questions || [];
+        return questions;
+    } catch (error) {
         console.error('Error loading questions:', error);
-        // Fallback questions if JSON fails to load
-        questions = [
-            {
-                question: "Sample question",
-                options: ["A. Option 1", "B. Option 2", "C. Option 3", "D. Option 4"],
-                correct: 0
-            }
-        ];
-        initQuiz();
-    });
+        // Fallback to empty array if JSON fails to load
+        return [];
+    }
+}
 
 // Quiz State
 let currentQuestion = 0;
@@ -36,8 +30,15 @@ const prevBtn = document.querySelector('.prev-btn');
 const progressFill = document.querySelector('.progress-fill');
 
 // Initialize Quiz
-function initQuiz() {
-    loadQuestion();
+async function initQuiz() {
+    await loadQuestionsFromJSON();
+    if (questions.length > 0) {
+        loadQuestion();
+    } else {
+        // Handle case where no questions are loaded
+        questionText.textContent = 'No questions available. Please check the JSON file.';
+        optionsContainer.innerHTML = '';
+    }
 }
 
 // Load Current Question
@@ -167,7 +168,7 @@ function showFinalResult() {
     quizContainer.innerHTML = `
         <div class="final-result">
             <div class="result-header">
-                <h2>${emoji} Kayachikitsa Quiz Complete!</h2>
+                <h2>${emoji} Samhita Adhyayan 3 Quiz Complete!</h2>
             </div>
             <div class="result-stats">
                 <div class="score-display">
@@ -292,5 +293,5 @@ function showFinalResult() {
 nextBtn.addEventListener('click', nextQuestion);
 prevBtn.addEventListener('click', previousQuestion);
 
-// Initialize quiz when page loads (will be called after JSON loads)
-// document.addEventListener('DOMContentLoaded', initQuiz);
+// Initialize quiz when page loads
+document.addEventListener('DOMContentLoaded', initQuiz);

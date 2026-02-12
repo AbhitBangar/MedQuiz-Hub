@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "question": "Implantation occurs at:",
+      "options": ["A. Day 3", "B. Day 5", "C. Day 7", "D. Day 14"],
+      "correct": 2
+    },
+    {
+      "question": "Hormone maintaining pregnancy:",
+      "options": ["A. Estrogen", "B. Progesterone", "C. hCG", "D. Prolactin"],
+      "correct": 1
+    },
+    {
+      "question": "Artavavaha srotas moola:",
+      "options": ["A. Garbhashaya & Artavavahi dhamani", "B. Yonimarga", "C. Stana", "D. Hridaya"],
+      "correct": 0
+    },
+    {
+      "question": "Asrigdara corresponds to:",
+      "options": ["A. Amenorrhea", "B. Menorrhagia", "C. Dysmenorrhea", "D. Oligomenorrhea"],
+      "correct": 1
+    },
+    {
+      "question": "Lochia rubra lasts for:",
+      "options": ["A. 1–2 days", "B. 3–4 days", "C. 5–7 days", "D. 10 days"],
+      "correct": 2
+    },
+    {
+      "question": "Most common cause of PPH:",
+      "options": ["A. Trauma", "B. Atony", "C. Retained placenta", "D. Coagulopathy"],
+      "correct": 1
+    },
+    {
+      "question": "Ovulation occurs on:",
+      "options": ["A. Day 7", "B. Day 10", "C. Day 14", "D. Day 21"],
+      "correct": 2
+    },
+    {
+      "question": "Yoni vyapad described by:",
+      "options": ["A. Charaka", "B. Sushruta", "C. Vagbhata", "D. All"],
+      "correct": 3
+    },
+    {
+      "question": "Normal duration of pregnancy:",
+      "options": ["A. 260 days", "B. 270 days", "C. 280 days", "D. 300 days"],
+      "correct": 2
+    },
+    {
+      "question": "Mudgarashabda indicates:",
+      "options": ["A. Placenta previa", "B. Cephalopelvic disproportion", "C. Cord prolapse", "D. Breech"],
+      "correct": 1
+    },
+    {
+      "question": "Hegar's sign indicates:",
+      "options": ["A. Cervical softening", "B. Uterine enlargement", "C. Vaginal changes", "D. Breast changes"],
+      "correct": 0
+    },
+    {
+      "question": "Best contraception in lactation:",
+      "options": ["A. OCP", "B. IUCD", "C. Barrier", "D. Progesterone-only pill"],
+      "correct": 3
+    },
+    {
+      "question": "Garbhini paricharya mainly prevents:",
+      "options": ["A. Garbha srava", "B. Garbha kshaya", "C. Garbha vikriti", "D. All"],
+      "correct": 3
+    },
+    {
+      "question": "Placenta develops from:",
+      "options": ["A. Endometrium", "B. Decidua basalis", "C. Myometrium", "D. Perimetrium"],
+      "correct": 1
+    },
+    {
+      "question": "First stage of labor ends with:",
+      "options": ["A. Pain onset", "B. Full dilatation", "C. Crowning", "D. Expulsion"],
+      "correct": 1
+    }
+  ]
+}

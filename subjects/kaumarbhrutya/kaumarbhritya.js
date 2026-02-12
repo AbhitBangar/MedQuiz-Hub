@@ -1,31 +1,19 @@
-// Kaumarbhritya Questions Data
-const questions = [
-    {
-        question: "Sample question 1 for Kaumarbhritya",
-        options: ["A. Option 1", "B. Option 2", "C. Correct Answer", "D. Option 4"],
-        correct: 2
-    },
-    {
-        question: "Sample question 2 for Kaumarbhritya",
-        options: ["A. Option 1", "B. Correct Answer", "C. Option 3", "D. Option 4"],
-        correct: 1
-    },
-    {
-        question: "Sample question 3 for Kaumarbhritya",
-        options: ["A. Correct Answer", "B. Option 2", "C. Option 3", "D. Option 4"],
-        correct: 0
-    },
-    {
-        question: "Sample question 4 for Kaumarbhritya",
-        options: ["A. Option 1", "B. Option 2", "C. Option 3", "D. Correct Answer"],
-        correct: 3
-    },
-    {
-        question: "Sample question 5 for Kaumarbhritya",
-        options: ["A. Option 1", "B. Correct Answer", "C. Option 3", "D. Option 4"],
-        correct: 1
+// Load questions from JSON file
+let questions = [];
+
+// Load questions from JSON file
+async function loadQuestionsFromJSON() {
+    try {
+        const response = await fetch('./kaumarbhritya.json');
+        const data = await response.json();
+        questions = data.questions;
+        return questions;
+    } catch (error) {
+        console.error('Error loading questions:', error);
+        // Fallback to empty array if JSON fails to load
+        return [];
     }
-];
+}
 
 // Quiz State
 let currentQuestion = 0;
@@ -38,11 +26,19 @@ const questionText = document.querySelector('.question-text');
 const optionsContainer = document.querySelector('.options-container');
 const resultMessage = document.querySelector('.result-message');
 const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
 const progressFill = document.querySelector('.progress-fill');
 
 // Initialize Quiz
-function initQuiz() {
-    loadQuestion();
+async function initQuiz() {
+    await loadQuestionsFromJSON();
+    if (questions.length > 0) {
+        loadQuestion();
+    } else {
+        // Handle case where no questions are loaded
+        questionText.textContent = 'No questions available. Please check the JSON file.';
+        optionsContainer.innerHTML = '';
+    }
 }
 
 // Load Current Question
@@ -69,6 +65,7 @@ function loadQuestion() {
     resultMessage.textContent = '';
     resultMessage.className = 'result-message';
     nextBtn.style.display = 'none';
+    prevBtn.style.display = 'none';
     
     // Update progress bar
     updateProgressBar();
@@ -105,8 +102,9 @@ function selectAnswer(button, selectedIndex) {
     // Show result message
     showResultMessage(isCorrect);
     
-    // Show next button
+    // Show navigation buttons
     nextBtn.style.display = 'inline-flex';
+    prevBtn.style.display = currentQuestion > 0 ? 'inline-flex' : 'none';
 }
 
 // Show Result Message
@@ -128,6 +126,14 @@ function nextQuestion() {
         loadQuestion();
     } else {
         showFinalResult();
+    }
+}
+
+// Previous Question
+function previousQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
     }
 }
 
@@ -178,6 +184,7 @@ function showFinalResult() {
             </div>
             <div class="action-buttons">
                 <button class="retry-btn" onclick="location.reload()">Try Again</button>
+                <button class="spin-btn" onclick="window.location.href='../../level3/level3.html'">Spin Again</button>
                 <button class="home-btn" onclick="window.location.href='../../select.html'">Home</button>
             </div>
         </div>
@@ -234,7 +241,7 @@ function showFinalResult() {
             gap: 1rem;
         }
         
-        .retry-btn, .home-btn {
+        .retry-btn, .home-btn, .spin-btn {
             padding: 1rem 2rem;
             font-size: 1.1rem;
             font-weight: 600;
@@ -257,6 +264,17 @@ function showFinalResult() {
             box-shadow: 0 0.5rem 1.5rem rgba(102, 0, 204, 0.4);
         }
         
+        .spin-btn {
+            background: linear-gradient(145deg, #ff6b6b, #ff5252);
+            color: #fff;
+            box-shadow: 0 0.3rem 1rem rgba(255, 107, 107, 0.3);
+        }
+        
+        .spin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1.5rem rgba(255, 107, 107, 0.4);
+        }
+        
         .home-btn {
             background: linear-gradient(145deg, #28a745, #20c997);
             color: #fff;
@@ -273,6 +291,7 @@ function showFinalResult() {
 
 // Event Listeners
 nextBtn.addEventListener('click', nextQuestion);
+prevBtn.addEventListener('click', previousQuestion);
 
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', initQuiz);
