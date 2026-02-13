@@ -61,11 +61,6 @@ const imageData = [
         image: '../assets/level4/12.jpeg',
         title: "Medical Image 12",
         explanation: "This is a medical image for educational purposes."
-    },
-    {
-        image: '../assets/level4/13.jpeg',
-        title: "Medical Image 13",
-        explanation: "This is a medical image for educational purposes."
     }
 ];
 
