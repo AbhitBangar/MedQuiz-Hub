@@ -21,7 +21,79 @@ let timerInterval;
 let timeLeft = 10;
 let timerStarted = false;
 
+// Sound effects for timer
+let audioContext;
+let tickSound;
+let warningSound;
+let endSound;
+
 let MAX_QUESTIONS = 20;
+
+// Initialize sounds
+function initializeSounds() {
+    // Initialize Web Audio API
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    // Create sound generators
+    tickSound = () => playBeep(800, 50, 0.1);  // High pitch, short duration, low volume
+    warningSound = () => playBeep(600, 200, 0.3);  // Medium pitch, medium duration, medium volume
+    endSound = () => playBeep(400, 300, 0.4);  // Low pitch, longer duration, higher volume
+}
+
+// Play beep sound using Web Audio API
+function playBeep(frequency, duration, volume) {
+    try {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = frequency;
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + duration / 1000);
+    } catch (error) {
+        console.log('Sound error:', error);
+    }
+}
+
+// Play intense countdown sound for last 5 seconds
+function playIntenseCountdownSound(timeLeft) {
+    try {
+        // Different frequency for each second to create urgency
+        const frequencies = {
+            5: 1000,  // High pitch for 5
+            4: 900,   // Slightly lower for 4
+            3: 800,   // Lower for 3
+            2: 700,   // Lower for 2
+            1: 600    // Lower for 1
+        };
+        
+        const frequency = frequencies[timeLeft] || 600;
+        const duration = 150; // Shorter duration for rapid succession
+        const volume = 0.5; // Higher volume for intensity
+        
+        playBeep(frequency, duration, volume);
+    } catch (error) {
+        console.log('Intense countdown sound error:', error);
+    }
+}
+
+// Play sound effect
+function playSound(sound) {
+    try {
+        if (typeof sound === 'function') {
+            sound();  // Call the sound generator function
+        }
+    } catch (error) {
+        console.log('Sound error:', error);
+    }
+}
 
 // Get subject from URL parameter
 function getSubjectFromURL() {
@@ -144,16 +216,26 @@ const startTimer = () => {
     startTimerButton.onclick = showAnswer;
     answerContainer.classList.add('hidden');
     timerStarted = true;
+    
+    // Play immediate start sound
+    playSound(tickSound);
 
     timerInterval = setInterval(() => {
         timeLeft--;
         timerDisplay.innerText = timeLeft;
-
+        
+        // Play tick sound every second
+        if (timeLeft > 0) {
+            playSound(tickSound);
+        }
+        
         // Change timer color when time is running out
         if (timeLeft <= 5) {
             timerDisplay.classList.add('warning');
+            // Play intense countdown sound for last 5 seconds
+            playIntenseCountdownSound(timeLeft);
         }
-
+        
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             // Timer ran out - don't show answer automatically
@@ -161,6 +243,8 @@ const startTimer = () => {
             startTimerButton.innerText = 'Show Answer';
             startTimerButton.className = 'btn-show-answer';
             startTimerButton.onclick = showAnswer;
+            // Play end sound when timer reaches 0
+            playSound(endSound);
         }
     }, 1000);
 };
@@ -231,17 +315,20 @@ const restartQuiz = () => {
 
 // Go Home
 const goHome = () => {
-    window.location.href = '../select.html';
+window.location.href = '../select.html';
 };
 
-// Initialize the game
+// Initialize game
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Level 1 page loaded, initializing...');
+console.log('Level 1 page loaded, initializing...');
     
-    // Load questions from JSON file
-    loadQuestionsFromJSON();
+// Initialize sound effects
+initializeSounds();
     
-    // Add event listeners for restart and home buttons
-    restartBtn.addEventListener('click', restartQuiz);
-    homeBtn.addEventListener('click', goHome);
+// Load questions from JSON file
+loadQuestionsFromJSON();
+    
+// Add event listeners for restart and home buttons
+restartBtn.addEventListener('click', restartQuiz);
+homeBtn.addEventListener('click', goHome);
 });
