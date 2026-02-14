@@ -156,8 +156,11 @@ const startTimer = () => {
 
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            // When timer runs out, automatically show answer
-            showAnswer();
+            // Timer ran out - don't show answer automatically
+            // User must click "Show Answer" button to see answer
+            startTimerButton.innerText = 'Show Answer';
+            startTimerButton.className = 'btn-show-answer';
+            startTimerButton.onclick = showAnswer;
         }
     }, 1000);
 };
