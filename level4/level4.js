@@ -5,62 +5,62 @@ const imageData = [
     {
         image: '../assets/level4/1.jpeg',
         title: "Medical Image 1",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Medinaz - Kwashiorkor."
     },
     {
         image: '../assets/level4/2.jpeg',
         title: "Medical Image 2",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "X-linked Agammaglobulinemia (XLA). The image illustrates key features of X-linked Agammaglobulinemia, a primary immunodeficiency disorder."
     },
     {
         image: '../assets/level4/3.jpeg',
         title: "Medical Image 3",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Lumbar puncture, also known as a spinal tap."
     },
     {
         image: '../assets/level4/4.jpeg',
         title: "Medical Image 4",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "The image illustrates a medical mnemonic for Sturge-Weber Syndrome, a rare neurocutaneous disorder characterized by abnormal development of blood vessels in the brain, eyes, and skin."
     },
     {
         image: '../assets/level4/5.jpeg',
         title: "Medical Image 5",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Edwards Syndrome (Trisomy 18). Kidney, Heart, CNS malformations. Many die in utero. Half of those born don't survive past 1st week."
     },
     {
         image: '../assets/level4/6.jpeg',
         title: "Medical Image 6",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Phenylketonuria (PKU) Phenylketonuria is an inherited disorder that increases the levels of a substance called phenylalanine in the blood. It is caused by a defect in the gene that helps create the enzyme needed to break down phenylalanine."
     },
     {
         image: '../assets/level4/7.jpeg',
         title: "Medical Image 7",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Congenital Syphilis. The image illustrates various clinical manifestations of late congenital syphilis."
     },
     {
         image: '../assets/level4/8.jpeg',
         title: "Medical Image 8",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Typhoid Fever. The image illustrates the clinical manifestations of typhoid fever, a serious bacterial infection caused by Salmonella typhi that is spread through contaminated food or water."
     },
     {
         image: '../assets/level4/9.jpeg',
         title: "Medical Image 9",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Reye's Syndrome.This illustration depicts Reye's syndrome, a rare but serious condition that causes swelling in the liver and brain. It typically affects children and teenagers recovering from a viral infection, such as chickenpox."
     },
     {
         image: '../assets/level4/10.jpeg',
         title: "Medical Image 10",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "The disease is Graves' disease. This is an autoimmune disorder that causes the thyroid gland to produce too much hormone (hyperthyroidism)."
     },
     {
         image: '../assets/level4/11.jpeg',
         title: "Medical Image 11",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Pyloric stenosis."
     },
     {
         image: '../assets/level4/12.jpeg',
         title: "Medical Image 12",
-        explanation: "This is a medical image for educational purposes."
+        explanation: "Kawasaki Disease"
     }
 ];
 
