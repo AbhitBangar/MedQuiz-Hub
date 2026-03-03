@@ -346,6 +346,23 @@ main {
     box-shadow: 0 0.3rem 1rem rgba(40, 167, 69, 0.3);
 }
 
+/* Finish Button State - Blue */
+.btn-finish {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    box-shadow: 0 0.3rem 1rem rgba(0, 123, 255, 0.3);
+}
+
+.btn-finish:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 123, 255, 0.4);
+    background: linear-gradient(145deg, #0056b3, #004085);
+}
+
+.btn-finish:active {
+    transform: translateY(0);
+    box-shadow: 0 0.3rem 1rem rgba(0, 123, 255, 0.3);
+}
+
 /* Results Container */
 #results-container {
     text-align: center;

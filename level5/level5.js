@@ -21,7 +21,7 @@ let availableQuestions = [];
 let questions = [];
 let questionHistory = []; // Track question history for back navigation
 
-let MAX_QUESTIONS = 10;
+let MAX_QUESTIONS = 11;
 
 // Case Scenarios Data
 const caseScenarios = [
@@ -68,6 +68,11 @@ const caseScenarios = [
     {
         question: "A child with prolonged fever, weight loss, hepatosplenomegaly, pancytopenia.\nBone marrow shows intracellular organisms in macrophages.\nDiagnosis?\nA. Malaria\nB. Kala-azar\nC. Brucellosis\nD. Lymphoma",
         answer: "Modern: Kala-azar (Visceral Leishmaniasis)\nAyurveda: Visarpa Jwara / Krimi Roga (systemic parasitic disease)"
+    },
+    {
+        question: "Identify the condition shown in the image:",
+        image: "../assets/level5-1.jpeg",
+        answer: "Modern: Increase PEEP (Positive End-Expiratory Pressure)\nAyurveda: Improves Prana Vata and enhances Agni in respiratory system"
     }
 ];
 
@@ -158,10 +163,18 @@ const showAnswer = () => {
     answerText.innerText = correctAnswer;
     answerContainer.classList.remove('hidden');
 
-    // Change button to Next Question
-    showAnswerButton.innerText = 'Next Case';
-    showAnswerButton.className = 'btn-next-question';
-    showAnswerButton.onclick = getNewQuestion;
+    // Check if this is the last question
+    if (questionCounter >= MAX_QUESTIONS) {
+        // Last question - show Finish button
+        showAnswerButton.innerText = 'Finish';
+        showAnswerButton.className = 'btn-finish';
+        showAnswerButton.onclick = showResults;
+    } else {
+        // Not last question - show Next Case button
+        showAnswerButton.innerText = 'Next Case';
+        showAnswerButton.className = 'btn-next-question';
+        showAnswerButton.onclick = getNewQuestion;
+    }
 };
 
 // Go to previous question
