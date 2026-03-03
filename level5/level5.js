@@ -21,7 +21,7 @@ let availableQuestions = [];
 let questions = [];
 let questionHistory = []; // Track question history for back navigation
 
-let MAX_QUESTIONS = 11;
+let MAX_QUESTIONS = 13;
 
 // Case Scenarios Data
 const caseScenarios = [
@@ -32,6 +32,11 @@ const caseScenarios = [
     {
         question: "A 60-year-old chronic smoker presents with productive cough for 3 months over 2 consecutive years, breathlessness on exertion, and barrel-shaped chest.\nChest X-ray shows hyperinflated lungs.\nIdentify the disease.",
         answer: "Modern: Chronic Obstructive Pulmonary Disease (COPD)\nAyurveda: Tamaka Shwasa"
+    },
+    {
+        question: "Identify the condition shown in the image:",
+        image: "../assets/level5-2.jpeg",
+        answer: "Modern: Bronchiolitis.\nAyurveda: Shwasa Roga (Kaphaja Shwasa in infants)."
     },
     {
         question: "A 55-year-old male presents with severe epigastric pain radiating to the back, nausea, and vomiting.\nSerum amylase: ↑↑, Serum lipase: ↑↑.\nIdentify the disease.",
@@ -46,9 +51,15 @@ const caseScenarios = [
         answer: "Modern: Rheumatoid Arthritis\nAyurveda: Āmavāta"
     },
     {
+        question: "Identify the condition shown in the image:",
+        image: "../assets/level5-1.jpeg",
+        answer: "Modern: Increase PEEP (Positive End-Expiratory Pressure)\nAyurveda: Improves Prana Vata and enhances Agni in respiratory system"
+    },
+    {
         question: "A patient presents with severe headache, projectile vomiting, blurred vision, and papilledema on fundus exam.\nCT shows space-occupying lesion",
         answer: "Modern: Raised Intracranial Pressure (Brain Tumor)\nAyurveda: Śiroroga – Vātakaphaja"
     },
+
     {
         question: "A 50-year-old male presents with resting tremor, rigidity, bradykinesia, mask-like face, and shuffling gait.",
         answer: "Modern: Parkinson's disease\nAyurveda: Kampavāta"
@@ -57,22 +68,22 @@ const caseScenarios = [
         question: "A 35-year-old male complains of painful defecation, streaks of bright red blood in stool, and spasm of anal sphincter.\nOn examination: Linear tear at posterior midline.\nIdentify the disease.",
         answer: "Modern: Fissure-in-Ano\nAyurveda: Parikartika"
     },
-    {
-        question: "A 2-month-old presents with cough, tachypnea, wheezing, and poor feeding.\nOxygen saturation is 90% on room air.\nChest X-ray of a 2-month-old infant shows:\n• Hyperinflated lungs\n• Flattened diaphragms\n• Perihilar streaking\n• No focal consolidation\nWhat is the MOST likely diagnosis?",
-        answer: "Modern: Bronchiolitis\nAyurveda: Shwasa Roga (Kaphaja Shwasa in infants)"
-    },
+    // {
+    //     question: "A 2-month-old presents with cough, tachypnea, wheezing, and poor feeding.\nOxygen saturation is 90% on room air.\nChest X-ray of a 2-month-old infant shows:\n• Hyperinflated lungs\n• Flattened diaphragms\n• Perihilar streaking\n• No focal consolidation\nWhat is the MOST likely diagnosis?",
+    //     answer: "Modern: Bronchiolitis\nAyurveda: Shwasa Roga (Kaphaja Shwasa in infants)"
+    // },
     // {
     //     question: "A 26-week preterm neonate with RDS is on pressure-limited ventilation.\nABG shows: pH 7.25, PaCO₂ 62 mmHg, PaO₂ 70 mmHg.\nChest X-ray shows diffuse atelectasis.\nWhich ventilator adjustment will most effectively improve oxygenation?\nA. Increase respiratory rate\nB. Increase peak inspiratory pressure\nC. Increase PEEP\nD. Decrease inspiratory time\nE. Increase FiO₂ only",
     //     answer: "Modern: Increase PEEP (Positive End-Expiratory Pressure)\nAyurveda: Improves Prana Vata and enhances Agni in respiratory system"
     // },
-    {
-        question: "A child with prolonged fever, weight loss, hepatosplenomegaly, pancytopenia.\nBone marrow shows intracellular organisms in macrophages.\nDiagnosis?\nA. Malaria\nB. Kala-azar\nC. Brucellosis\nD. Lymphoma",
-        answer: "Modern: Kala-azar (Visceral Leishmaniasis)\nAyurveda: Visarpa Jwara / Krimi Roga (systemic parasitic disease)"
-    },
+    // {
+    //     question: "A child with prolonged fever, weight loss, hepatosplenomegaly, pancytopenia.\nBone marrow shows intracellular organisms in macrophages.\nDiagnosis?\nA. Malaria\nB. Kala-azar\nC. Brucellosis\nD. Lymphoma",
+    //     answer: "Modern: Kala-azar (Visceral Leishmaniasis)\nAyurveda: Visarpa Jwara / Krimi Roga (systemic parasitic disease)"
+    // },
     {
         question: "Identify the condition shown in the image:",
-        image: "../assets/level5-1.jpeg",
-        answer: "Modern: Increase PEEP (Positive End-Expiratory Pressure)\nAyurveda: Improves Prana Vata and enhances Agni in respiratory system"
+        image: "../assets/level5-3.jpeg",
+        answer: "Modern: Kala-azar (Visceral Leishmaniasis).\nAyurveda: Visarpa Jwara / Krimi Roga (systemic parasitic disease)."
     }
 ];
 
