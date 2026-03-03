@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Scenarios - Level 5</title>
+    <link rel="stylesheet" href="./level5.css" />
+    <link rel="icon" type="image/jpg" href="../assets/collegelogo.jpg">
+</head>
+<body>
+    <header>
+        <h1>🩺 Case Scenarios</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div id="loader"></div>
+            <div id="game" class="justify-center flex-column hidden">
+                <div id="hud">
+                    <div id="hud-item">
+                        <p id="progressText" class="hud-prefix">
+                            Case
+                        </p>
+                        <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 id="question"></h2>
+                
+                <div id="image-container" class="hidden">
+                    <img id="question-image" src="" alt="Medical Image" />
+                </div>
+                
+                <div id="answer-container" class="hidden">
+                    <div id="answer-label">Diagnosis:</div>
+                    <div id="answer-text"></div>
+                </div>
+                
+                <div id="start-container">
+                    <div id="button-row">
+                        <button id="prev-question-btn" class="prev-question-btn hidden">← Previous</button>
+                        <button id="show-answer-button">Show Answer</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Section - Outside game container -->
+            <div id="results-container" class="hidden">
+                <div class="results-content">
+                    <h2>Quiz Complete!</h2>
+                    <p id="results-message">You've completed all case scenarios!</p>
+                    <div class="action-buttons">
+                        <button id="restart-btn" class="restart-btn">Restart Quiz</button>
+                        <button id="home-btn" class="home-btn">Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./level5.js"></script>
+</body>
+</html>
