@@ -76,7 +76,14 @@ function validateStudentLogin() {
         
         // Redirect to student dashboard after 1 second
         setTimeout(() => {
-            window.location.href = "home.html";
+            // Check if there's a saved redirect URL
+            const redirectAfterLogin = localStorage.getItem('redirectAfterLogin');
+            if (redirectAfterLogin) {
+                localStorage.removeItem('redirectAfterLogin');
+                window.location.href = redirectAfterLogin;
+            } else {
+                window.location.href = "home.html";
+            }
         }, 1000);
         
         return false;
@@ -119,7 +126,14 @@ function validateAdminLogin() {
         
         // Redirect to admin dashboard or home page after 1 second
         setTimeout(() => {
-            window.location.href = "home.html";
+            // Check if there's a saved redirect URL
+            const redirectAfterLogin = localStorage.getItem('redirectAfterLogin');
+            if (redirectAfterLogin) {
+                localStorage.removeItem('redirectAfterLogin');
+                window.location.href = redirectAfterLogin;
+            } else {
+                window.location.href = "home.html";
+            }
         }, 1000);
         
         return false;

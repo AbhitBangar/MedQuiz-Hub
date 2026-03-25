@@ -3,8 +3,9 @@ const progressText = document.getElementById('progressText');
 const progressBarFull = document.getElementById('progressBarFull');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
+const timerDisplay = document.getElementById('timer');
 const startContainer = document.getElementById('start-container');
-const showAnswerButton = document.getElementById('show-answer-button');
+const startTimerButton = document.getElementById('start-timer-button');
 const answerContainer = document.getElementById('answer-container');
 const answerText = document.getElementById('answer-text');
 const resultsContainer = document.getElementById('results-container');
@@ -20,6 +21,15 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 let questionHistory = []; // Track question history for back navigation
+let timerInterval;
+let timeLeft = 30;
+let timerStarted = false;
+
+// Sound effects for timer
+let audioContext;
+let tickSound;
+let warningSound;
+let endSound;
 
 let MAX_QUESTIONS = 13;
 
@@ -95,10 +105,80 @@ function initializeQuestions() {
     startGame();
 }
 
+// Initialize sounds
+function initializeSounds() {
+    // Initialize Web Audio API
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    // Create sound generators
+    tickSound = () => playBeep(800, 50, 0.1);  // High pitch, short duration, low volume
+    warningSound = () => playBeep(600, 200, 0.3);  // Medium pitch, medium duration, medium volume
+    endSound = () => playBeep(400, 300, 0.4);  // Low pitch, longer duration, higher volume
+}
+
+// Play beep sound using Web Audio API
+function playBeep(frequency, duration, volume) {
+    try {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = frequency;
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + duration / 1000);
+    } catch (error) {
+        console.log('Sound error:', error);
+    }
+}
+
+// Play intense countdown sound for last 5 seconds
+function playIntenseCountdownSound(timeLeft) {
+    try {
+        // Different frequency for each second to create urgency
+        const frequencies = {
+            5: 1000,  // High pitch for 5
+            4: 900,   // Slightly lower for 4
+            3: 800,   // Lower for 3
+            2: 700,   // Lower for 2
+            1: 600    // Lower for 1
+        };
+        
+        const frequency = frequencies[timeLeft] || 600;
+        const duration = 150; // Shorter duration for rapid succession
+        const volume = 0.5; // Higher volume for intensity
+        
+        playBeep(frequency, duration, volume);
+    } catch (error) {
+        console.log('Intense countdown sound error:', error);
+    }
+}
+
+// Play sound effect
+function playSound(sound) {
+    try {
+        if (typeof sound === 'function') {
+            sound();  // Call the sound generator function
+        }
+    } catch (error) {
+        console.log('Sound error:', error);
+    }
+}
+
 const startGame = () => {
     questionCounter = 0;
     availableQuestions = [...questions];
     questionHistory = []; // Reset question history
+    
+    // Initialize sounds
+    initializeSounds();
+    
     getNewQuestion();
     game.classList.remove('hidden');
     loader.classList.add('hidden');
@@ -155,9 +235,10 @@ const getNewQuestion = () => {
 const showStartButton = () => {
     startContainer.classList.remove('hidden');
     answerContainer.classList.add('hidden');
-    showAnswerButton.innerText = 'Show Answer';
-    showAnswerButton.className = 'btn-show-answer';
-    showAnswerButton.onclick = showAnswer;
+    startTimerButton.innerText = 'Start Timer';
+    startTimerButton.className = 'btn-start-timer';
+    startTimerButton.onclick = startTimer;
+    timerStarted = false;
     
     // Show/hide previous button based on history
     if (questionHistory.length > 1) {
@@ -167,7 +248,54 @@ const showStartButton = () => {
     }
 };
 
+// Timer Functions
+const startTimer = () => {
+    timeLeft = 30;
+    timerDisplay.innerText = timeLeft;
+    
+    // Change button to Show Answer
+    startTimerButton.innerText = 'Show Answer';
+    startTimerButton.className = 'btn-show-answer';
+    startTimerButton.onclick = showAnswer;
+    answerContainer.classList.add('hidden');
+    timerStarted = true;
+    
+    // Remove warning class if present
+    timerDisplay.classList.remove('warning');
+    
+    // Start countdown
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.innerText = timeLeft;
+        
+        // Add warning effect when time is running out
+        if (timeLeft <= 5) {
+            timerDisplay.classList.add('warning');
+            playIntenseCountdownSound(timeLeft);
+        } else {
+            playSound(tickSound);
+        }
+        
+        // Check if timer reached 0
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            // Timer ran out - don't show answer automatically
+            // User must click "Show Answer" button to see answer
+            startTimerButton.innerText = 'Show Answer';
+            startTimerButton.className = 'btn-show-answer';
+            startTimerButton.onclick = showAnswer;
+            // Play end sound when timer reaches 0
+            playSound(endSound);
+        }
+    }, 1000);
+};
+
 const showAnswer = () => {
+    // Clear timer if running
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+    
     // Get correct answer
     let correctAnswer = currentQuestion.answer || "Answer not available";
     
@@ -177,14 +305,14 @@ const showAnswer = () => {
     // Check if this is the last question
     if (questionCounter >= MAX_QUESTIONS) {
         // Last question - show Finish button
-        showAnswerButton.innerText = 'Finish';
-        showAnswerButton.className = 'btn-finish';
-        showAnswerButton.onclick = showResults;
+        startTimerButton.innerText = 'Finish';
+        startTimerButton.className = 'btn-finish';
+        startTimerButton.onclick = showResults;
     } else {
         // Not last question - show Next Case button
-        showAnswerButton.innerText = 'Next Case';
-        showAnswerButton.className = 'btn-next-question';
-        showAnswerButton.onclick = getNewQuestion;
+        startTimerButton.innerText = 'Next Case';
+        startTimerButton.className = 'btn-next-question';
+        startTimerButton.onclick = getNewQuestion;
     }
 };
 

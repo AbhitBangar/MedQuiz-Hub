@@ -348,7 +348,28 @@ header {
         font-size: 1.8rem;
         padding: 1.5rem;
     }
-
+    
+    /* Responsive button positioning */
+    body button[onclick*="window.location.href"],
+    body button[onclick*="logout()"] {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important;
+        padding: 8px 16px !important;
+        font-size: 0.9rem !important;
+        z-index: 1001 !important;
+    }
+    
+    body button[onclick*="window.location.href"] {
+        left: 10px !important;
+        right: auto !important;
+    }
+    
+    body button[onclick*="logout()"] {
+        right: 10px !important;
+        left: auto !important;
+    }
+    
     .quiz-container {
         margin: 2rem 1rem;
         padding: 0 1rem;
@@ -415,6 +436,28 @@ header {
     header {
         font-size: 1.5rem;
         padding: 1.2rem;
+    }
+    
+    /* More compact button positioning for small screens */
+    body button[onclick*="window.location.href"],
+    body button[onclick*="logout()"] {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 15px !important;
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+        z-index: 1001 !important;
+        border-radius: 4px !important;
+    }
+    
+    body button[onclick*="window.location.href"] {
+        left: 8px !important;
+        right: auto !important;
+    }
+    
+    body button[onclick*="logout()"] {
+        right: 8px !important;
+        left: auto !important;
     }
 
     .quiz-container {
