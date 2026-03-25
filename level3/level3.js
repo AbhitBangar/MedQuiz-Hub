@@ -132,9 +132,9 @@ const valueGenerator = (angle) => {
     // Update final value display with selected subject
     finalValue.innerHTML = `<p>Selected: ${selectedSubject}</p>`;
     
-    // Update button text and link
+    // Update button text and link with single question mode
     selectedSegmentBtn.textContent = selectedSubject;
-    selectedSegmentBtn.href = subjectUrls[selectedSubject];
+    selectedSegmentBtn.href = `${subjectUrls[selectedSubject]}?mode=single&subject=${encodeURIComponent(selectedSubject)}`;
     selectedSegmentBtn.style.display = 'inline-flex';
     
     // Add visible class for animation
